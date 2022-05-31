@@ -6,27 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://windfill.gitee.io">
-  <title>python自动打卡 | windfill&#39;s Blog</title>
+  <title>python自动打卡 | Windfill&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。但是也有一个缺点，就是必须进行一个谷歌浏览器的打开才可以进行打卡，在一定的程度上使用范围不是那么广。还有关于验证码这块因为是截图，必然涉及一个屏幕分辨率的问题，所以其实使用python的爬虫才是">
+  <meta name="description" content="&amp;emsp;&amp;emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python自动打卡">
 <meta property="og:url" content="https://windfill.gitee.io/article/382186c8.html">
-<meta property="og:site_name" content="windfill&#39;s Blog">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。但是也有一个缺点，就是必须进行一个谷歌浏览器的打开才可以进行打卡，在一定的程度上使用范围不是那么广。还有关于验证码这块因为是截图，必然涉及一个屏幕分辨率的问题，所以其实使用python的爬虫才是">
+<meta property="og:site_name" content="Windfill&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-29T04:13:12.297Z">
-<meta property="article:modified_time" content="2021-08-17T10:40:49.324Z">
+<meta property="article:published_time" content="2021-02-04T02:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-31T03:50:29.490Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="自动打卡">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="windfill&#39;s Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Windfill&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.png">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -42,9 +42,6 @@
 
   
 
-  
-    
- 	  <script src="/lib/clickLove.js"></script>
   
   
 
@@ -119,7 +116,7 @@
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
+        href="https://github.com/windfill" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
@@ -214,7 +211,7 @@
         </span>
 
 <a href="/article/382186c8.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.297Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+        <time datetime="2021-02-04T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
 </a>
 
   
@@ -227,7 +224,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">620字</span>
+      <span class="post-count">576字</span>
     </span>
   </span>
 
@@ -247,18 +244,21 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。但是也有一个缺点，就是必须进行一个谷歌浏览器的打开才可以进行打卡，在一定的程度上使用范围不是那么广。还有关于验证码这块因为是截图，必然涉及一个屏幕分辨率的问题，所以其实使用python的爬虫才是一个最好的选择，可以部署到腾讯云函数，设置一个触发器进行定时的打卡。一位学长所写<a target="_blank" rel="noopener" href="https://gitee.com/ahaox/isp-cdu" title="isp打卡">https://gitee.com/ahaox/isp-cdu</a><br></font></p>
-<h2 id="1-浏览器打开"><a href="#1-浏览器打开" class="headerlink" title="1.浏览器打开"></a>1.浏览器打开</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></font></p>
+    <p><font color=#b275bc size=3>&emsp;&emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。<span id="more"></span>但是也有一个缺点，就是必须进行一个谷歌浏览器的打开才可以进行打卡，在一定的程度上使用范围不是那么广。还有关于验证码这块因为是截图，必然涉及一个屏幕分辨率的问题，所以其实使用python的爬虫才是一个最好的选择，可以部署到腾讯云函数，设置一个触发器进行定时的打卡。一位学长所写<a target="_blank" rel="noopener" href="https://gitee.com/ahaox/isp-cdu" title="isp打卡">https://gitee.com/ahaox/isp-cdu</a><br></font></p>
+<h2 id="1-浏览器打开"><a href="#1-浏览器打开" class="headerlink" title="1.浏览器打开"></a>1.浏览器打开</h2><font size=3>
+</font>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver  <span class="comment"># 用于打开网站</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>): <span class="comment"># （这里使用了Python类）初始化函数</span></span><br><span class="line">    self.driver = webdriver.Chrome()</span><br><span class="line">    self.find_element = self.driver.find_element_by_css_selector</span><br><span class="line"></span><br><span class="line">    self.driver.maximize_window()  <span class="comment"># 窗口最大化，便于进行下一步截图</span></span><br><span class="line">    self.driver.get(log_in)  <span class="comment"># 打开你的登陆页面，log_in为网址</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-识别"><a href="#2-识别" class="headerlink" title="2.识别"></a>2.识别</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;看网站的类型，一些网站有验证码，而且是图片，本次的网站就是一个文本模式。这就让我很无从下手，最后想了下，干脆就截图来实现了。慢慢调整角度最后还是可以实现的。<br></font></p>
+
+<h2 id="2-识别"><a href="#2-识别" class="headerlink" title="2.识别"></a>2.识别</h2><p><font size=3>&emsp;&emsp;看网站的类型，一些网站有验证码，而且是图片，本次的网站就是一个文本模式。这就让我很无从下手，最后想了下，干脆就截图来实现了。慢慢调整角度最后还是可以实现的。<br></font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">self.driver.save_screenshot(<span class="string">&#x27;pictures.png&#x27;</span>)  <span class="comment"># 全屏截图</span></span><br><span class="line">page_snap_obj = Image.<span class="built_in">open</span>(<span class="string">&#x27;pictures.png&#x27;</span>)</span><br><span class="line">box = (<span class="number">1140</span>, <span class="number">820</span>, <span class="number">1200</span>, <span class="number">855</span>) <span class="comment"># 验证码位置</span></span><br><span class="line">image_obj = page_snap_obj.crop(box)</span><br><span class="line">image_obj.save(<span class="string">&#x27;ver_code.png&#x27;</span>)</span><br><span class="line"><span class="comment"># image_obj.show()  # 打开验证码</span></span><br><span class="line">image = Image.<span class="built_in">open</span>(<span class="string">&#x27;ver_code.png&#x27;</span>)</span><br><span class="line">pytesseract.pytesseract.tesseract_cmd = <span class="string">r&quot;C:\Users\Tesseract\tesseract.exe&quot;</span>  <span class="comment"># 设置Pyteseract路径</span></span><br><span class="line">result = pytesseract.image_to_string(image)  <span class="comment"># 图片转文字，进行识别</span></span><br></pre></td></tr></table></figure>
-<p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后还可以使用相关的正则表达去掉不需要的字符，Tesseract是一个谷歌的识别库可以用来直接进行识别。<br></font></p>
-<h2 id="3-窗口切换"><a href="#3-窗口切换" class="headerlink" title="3.窗口切换"></a>3.窗口切换</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为是进行窗口的跳转，就是直接重新打开一个窗口，需要进行一个跳转不然无法进行操作。<br></font></p>
+<p><font size=3>&emsp;&emsp;最后还可以使用相关的正则表达去掉不需要的字符，Tesseract是一个谷歌的识别库可以用来直接进行识别。<br></font></p>
+<h2 id="3-窗口切换"><a href="#3-窗口切换" class="headerlink" title="3.窗口切换"></a>3.窗口切换</h2><p><font size=3>&emsp;&emsp;因为是进行窗口的跳转，就是直接重新打开一个窗口，需要进行一个跳转不然无法进行操作。<br></font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">all_handles = self.driver.window_handles</span><br><span class="line"><span class="keyword">for</span> window <span class="keyword">in</span> all_handles:</span><br><span class="line">    <span class="keyword">if</span> window != first_window_handle:</span><br><span class="line">        self.driver.switch_to.window(window)  <span class="comment"># 切换到非首页的窗口</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-点击"><a href="#4-点击" class="headerlink" title="4.点击"></a>4.点击</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selenium模拟人进行一个点击。<br></font></p>
+
+<h2 id="4-点击"><a href="#4-点击" class="headerlink" title="4.点击"></a>4.点击</h2><p><font size=3>&emsp;&emsp;selenium模拟人进行一个点击。<br></font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActionChains(self.driver).move_by_offset(<span class="number">550</span>, <span class="number">505</span>).click().perform()</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-文件信息读取"><a href="#5-文件信息读取" class="headerlink" title="5.文件信息读取"></a>5.文件信息读取</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从文件进行读取相关的数据<br></font></p>
+<h2 id="5-文件信息读取"><a href="#5-文件信息读取" class="headerlink" title="5.文件信息读取"></a>5.文件信息读取</h2><p><font size=3>&emsp;&emsp;从文件进行读取相关的数据<br></font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;account.txt&#x27;</span>, <span class="string">&#x27;rt&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> acc:</span><br><span class="line">        account = acc.readline()</span><br></pre></td></tr></table></figure>
 
     
@@ -280,7 +280,7 @@
         <li>
           <strong>版权声明： </strong>
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+          本作品采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议进行许可，转载请注明出处！
         </li>
         
       </ul>
@@ -326,18 +326,18 @@
 
 <nav id="article-nav">
   
-    <a href="/article/7e49a571.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/article/f37541b.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Python打包
+          Centos7下安装ftp服务
         
       </div>
     </a>
   
   
-    <a href="/article/de3d7d0d.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Win下pip换源</div>
+    <a href="/article/7e49a571.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python打包</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -375,6 +375,33 @@
 
 
 
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "hExvlwGBBIHRP6fctjVwHAUN-gzGzoHsz",
+            app_key: "75zHM3vePrMEj9mFNwaEzEtz",
+            placeholder: "想对我说些什么(*´∇｀*)",
+            avatar:"monsterid"
+        });
+    }
+</script>
+
+  </section>
 
 
 
@@ -504,15 +531,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
+                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,11 +543,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CentOS云盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,19 +575,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">RoboMaster</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">VB的坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,10 +607,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">重装系统</a>
               </li>
              
@@ -592,15 +615,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -608,15 +623,11 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">不必把太多人请进生命里</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,7 +635,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,11 +647,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
+                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -648,7 +663,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">折半查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -817,11 +840,11 @@
       jsonPath: modelJsonPath
     },
     display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
+       position: "left", 
+       width: 140, 
+       height: 280, 
       
+       vOffset: 10 
     },
     mobile: {
        show: false, 
@@ -836,16 +859,8 @@
 
   
   
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
-  
 </body>
-
+<script src="https://myhkw.cn/api/player/159772488317" id="myhk" key="159772488317" m="1"></script>
+<script src="/sakura.js"></script>
+<script src="/mouse_snow.min.js"></script>
 </html>

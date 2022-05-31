@@ -6,30 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://windfill.gitee.io">
-  <title>BiliBili视频倍速 | windfill&#39;s Blog</title>
+  <title>BiliBili视频倍速 | Windfill&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;ensp;&amp;ensp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍，使用python进行调用本地播放器进行倍速播放。2022更新：可以使用TamperMonkey加BilibiliEvolved插件 1.安装FFmpeg，Potplayer和python3&amp;ensp;&amp;ensp;FFmpeg下载链接Github网址，之后将bin加入系统path路径&amp;ensp;&amp;ensp;完美解码">
+  <meta name="description" content="&amp;emsp;&amp;emsp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BiliBili视频倍速">
 <meta property="og:url" content="https://windfill.gitee.io/article/414bc77e.html">
-<meta property="og:site_name" content="windfill&#39;s Blog">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍，使用python进行调用本地播放器进行倍速播放。2022更新：可以使用TamperMonkey加BilibiliEvolved插件 1.安装FFmpeg，Potplayer和python3&amp;ensp;&amp;ensp;FFmpeg下载链接Github网址，之后将bin加入系统path路径&amp;ensp;&amp;ensp;完美解码">
+<meta property="og:site_name" content="Windfill&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/windfill/CDN@d8a2bd3ddc46422cc09116fa1db6829b31e62df7/2021/11/19/f76f7459c1d028eba8300c0e58246d2a.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/windfill/CDN@06670c642e23f9c64be432c8a191b5c9ea8af6a6/2021/11/19/be71f35293ff992fc3d9d8e1a3156102.png">
-<meta property="article:published_time" content="2022-05-29T04:13:12.284Z">
-<meta property="article:modified_time" content="2022-05-12T11:50:35.591Z">
+<meta property="og:image" content="https://windfill.gitee.io/image/be71f35293ff992fc3d9d8e1a3156102.png">
+<meta property="article:published_time" content="2021-05-28T07:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-31T03:54:41.571Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="Bilibili">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/windfill/CDN@d8a2bd3ddc46422cc09116fa1db6829b31e62df7/2021/11/19/f76f7459c1d028eba8300c0e58246d2a.png">
+<meta name="twitter:image" content="https://windfill.gitee.io/image/be71f35293ff992fc3d9d8e1a3156102.png">
   
-    <link rel="alternative" href="/atom.xml" title="windfill&#39;s Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Windfill&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.png">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -45,9 +44,6 @@
 
   
 
-  
-    
- 	  <script src="/lib/clickLove.js"></script>
   
   
 
@@ -122,7 +118,7 @@
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
+        href="https://github.com/windfill" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
@@ -217,7 +213,7 @@
         </span>
 
 <a href="/article/414bc77e.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.284Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+        <time datetime="2021-05-28T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-28</time>
 </a>
 
   
@@ -230,7 +226,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">240字</span>
+      <span class="post-count">238字</span>
     </span>
   </span>
 
@@ -250,17 +246,19 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&ensp;&ensp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍，使用python进行调用本地播放器进行倍速播放。2022更新：可以使用TamperMonkey加<a target="_blank" rel="noopener" href="https://github.com/the1812/Bilibili-Evolved">BilibiliEvolved插件</a><br></font></p>
-<h2 id="1-安装FFmpeg，Potplayer和python3"><a href="#1-安装FFmpeg，Potplayer和python3" class="headerlink" title="1.安装FFmpeg，Potplayer和python3"></a>1.安装FFmpeg，Potplayer和python3</h2><p><font size=3>&ensp;&ensp;FFmpeg下载链接<a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds">Github网址</a>，之后将bin加入系统path路径<br>&ensp;&ensp;完美解码集成了Potplayer还有Potplayer需要的一些组件，建议直接安装完美解码<a target="_blank" rel="noopener" href="https://jm.wmzhe.com/">完美解码</a>之后将PotPlayerMini64.exe位置加入系统path路径<br>&ensp;&ensp;python3安装记得选择pip，如果是其他环境，如Anaconda3，可以把最后生成的exe复制到一个文件夹，添加到系统path路径即可<br></font></p>
-<h2 id="2-安装ykdl等"><a href="#2-安装ykdl等" class="headerlink" title="2.安装ykdl等"></a>2.安装ykdl等</h2><p><font size=3>&ensp;&ensp;</p>
+    <p><font color=#b275bc size=3>&emsp;&emsp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍<span id="more"></span>，使用python进行调用本地播放器进行倍速播放。2022更新：可以使用TamperMonkey加<a target="_blank" rel="noopener" href="https://github.com/the1812/Bilibili-Evolved">BilibiliEvolved插件</a><br></font></p>
+<h2 id="1-安装FFmpeg，Potplayer和python3"><a href="#1-安装FFmpeg，Potplayer和python3" class="headerlink" title="1.安装FFmpeg，Potplayer和python3"></a>1.安装FFmpeg，Potplayer和python3</h2><p><font size=3>&emsp;&emsp;FFmpeg下载链接<a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds">Github网址</a>，之后将bin加入系统path路径<br>&emsp;&emsp;完美解码集成了Potplayer还有Potplayer需要的一些组件，建议直接安装完美解码<a target="_blank" rel="noopener" href="https://jm.wmzhe.com/">完美解码</a>之后将PotPlayerMini64.exe位置加入系统path路径<br>&emsp;&emsp;python3安装记得选择pip，如果是其他环境，如Anaconda3，可以把最后生成的exe复制到一个文件夹，添加到系统path路径即可<br></font></p>
+<h2 id="2-安装ykdl等"><a href="#2-安装ykdl等" class="headerlink" title="2.安装ykdl等"></a>2.安装ykdl等</h2><font size=3>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ykdl -h 回车，如出现帮助内容则表示成功</span></span><br><span class="line">pip install --upgrade ykdl</span><br><span class="line"></span><br><span class="line">pip install --upgrade you-get</span><br><span class="line"></span><br><span class="line">pip install --upgrade youtube-dl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </font>
 
 
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p><font size=3>&ensp;&ensp;输入下面命令即可，最高12倍速</p>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p><font size=3>&emsp;&emsp;输入下面命令即可，最高12倍速</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ykdl -p PotPlayerMini64 视频地址</span><br></pre></td></tr></table></figure>
-<p>运行结果：<br><img src="https://cdn.jsdelivr.net/gh/windfill/CDN@d8a2bd3ddc46422cc09116fa1db6829b31e62df7/2021/11/19/f76f7459c1d028eba8300c0e58246d2a.png"><br><img src="https://cdn.jsdelivr.net/gh/windfill/CDN@06670c642e23f9c64be432c8a191b5c9ea8af6a6/2021/11/19/be71f35293ff992fc3d9d8e1a3156102.png"><br></font></p>
-
+<p>运行结果：</p>
+<div align=center><img src="../image/be71f35293ff992fc3d9d8e1a3156102.png" ><img/></div>
+</font>
     
 
     
@@ -280,7 +278,7 @@
         <li>
           <strong>版权声明： </strong>
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+          本作品采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议进行许可，转载请注明出处！
         </li>
         
       </ul>
@@ -326,18 +324,18 @@
 
 <nav id="article-nav">
   
-    <a href="/article/f37541b.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/article/23687f.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Centos7下安装ftp服务
+          RMUT交流
         
       </div>
     </a>
   
   
-    <a href="/article/79231136.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ARM64安装TeamViewer</div>
+    <a href="/article/124fc24.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C和C++编译器安装教程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -375,6 +373,33 @@
 
 
 
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "hExvlwGBBIHRP6fctjVwHAUN-gzGzoHsz",
+            app_key: "75zHM3vePrMEj9mFNwaEzEtz",
+            placeholder: "想对我说些什么(*´∇｀*)",
+            avatar:"monsterid"
+        });
+    }
+</script>
+
+  </section>
 
 
 
@@ -504,15 +529,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
+                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,11 +541,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CentOS云盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,19 +573,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">RoboMaster</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">VB的坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,10 +605,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">重装系统</a>
               </li>
              
@@ -592,15 +613,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -608,15 +621,11 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">不必把太多人请进生命里</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,7 +633,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,11 +645,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
+                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -648,7 +661,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">折半查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -817,11 +838,11 @@
       jsonPath: modelJsonPath
     },
     display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
+       position: "left", 
+       width: 140, 
+       height: 280, 
       
+       vOffset: 10 
     },
     mobile: {
        show: false, 
@@ -836,16 +857,8 @@
 
   
   
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
-  
 </body>
-
+<script src="https://myhkw.cn/api/player/159772488317" id="myhk" key="159772488317" m="1"></script>
+<script src="/sakura.js"></script>
+<script src="/mouse_snow.min.js"></script>
 </html>

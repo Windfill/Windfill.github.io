@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://windfill.gitee.io">
-  <title>windfill&#39;s Blog</title>
+  <title>Windfill&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
@@ -15,17 +15,17 @@
     <meta name="description" content=""> -->
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="windfill&#39;s Blog">
+<meta property="og:title" content="Windfill&#39;s Blog">
 <meta property="og:url" content="https://windfill.gitee.io/page/4/index.html">
-<meta property="og:site_name" content="windfill&#39;s Blog">
+<meta property="og:site_name" content="Windfill&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="windfill">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="windfill&#39;s Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Windfill&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.png">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -41,9 +41,6 @@
 
   
 
-  
-    
- 	  <script src="/lib/clickLove.js"></script>
   
   
 
@@ -118,7 +115,7 @@
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
+        href="https://github.com/windfill" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
@@ -196,7 +193,7 @@
             
 
   
-    <article id="post-Centos下搭建自己的云盘" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python打包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -204,7 +201,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/article/347f0c0d.html" target="_blank">CentOS下搭建简易云盘</a>
+	  <a class="article-title" href="/article/7e49a571.html" target="_blank">Python打包</a>
   
     </h1>
   
@@ -212,8 +209,8 @@
 
   
   
-<a href="/article/347f0c0d.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.287Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+<a href="/article/7e49a571.html" class="archive-article-date">
+        <time datetime="2021-02-03T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
 </a>
 
   
@@ -225,37 +222,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此教程来源于阿里官网。其实搭建一个简单的云盘很简单，不过要进行一个属于自己的diy还是有一定挑战的。<br></font></p>
-<h2 id="一-链接服务器"><a href="#一-链接服务器" class="headerlink" title="一.链接服务器"></a>一.链接服务器</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用ssh命令。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh root@你服务器的公网IP <span class="comment"># 链接</span></span><br><span class="line">ssh-keygen -R 你服务器的公网IP <span class="comment"># 这个是服务器重装系统或者换系统需要手动改变一下密钥</span></span><br></pre></td></tr></table></figure>
-</font>
-
-<h2 id="二-安装-OwnCloud"><a href="#二-安装-OwnCloud" class="headerlink" title="二.安装 OwnCloud"></a>二.安装 OwnCloud</h2><h3 id="1-添加一个新的软件源。"><a href="#1-添加一个新的软件源。" class="headerlink" title="1.添加一个新的软件源。"></a>1.添加一个新的软件源。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://download.owncloud.org/download/repositories/10.0/CentOS_7/repodata/repomd.xml.key</span><br><span class="line">wget http://download.owncloud.org/download/repositories/10.0/CentOS_7/ce:10.0.repo -O /etc/yum.repos.d/ce:10.0.repo</span><br></pre></td></tr></table></figure>
-<h3 id="2-安装OwnCloud-files"><a href="#2-安装OwnCloud-files" class="headerlink" title="2.安装OwnCloud-files"></a>2.安装OwnCloud-files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install owncloud-files</span><br></pre></td></tr></table></figure>
-<h3 id="3-查看是否安装成功"><a href="#3-查看是否安装成功" class="headerlink" title="3.查看是否安装成功"></a>3.查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll /var/www/html</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@4978e7e0545fc2d089ce7a285ea4d8a8976b6ed3/2021/02/16/95cb535d7b37fd8ec3e90c69ea23e77f.png"></p>
-<h2 id="三-安装-Apache-服务"><a href="#三-安装-Apache-服务" class="headerlink" title="三.安装 Apache 服务"></a>三.安装 Apache 服务</h2><h3 id="1-安装Apache"><a href="#1-安装Apache" class="headerlink" title="1.安装Apache"></a>1.安装Apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd –y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="2-启动Apache"><a href="#2-启动Apache" class="headerlink" title="2.启动Apache"></a>2.启动Apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure>
-<h3 id="3-验证是否安装成功"><a href="#3-验证是否安装成功" class="headerlink" title="3.验证是否安装成功"></a>3.验证是否安装成功</h3><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打开浏览器输入公网IP，如果出现如下图内容表示Apache安装成功</font></p>
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@e09c6fd19e44e3832b6d8327ff523da5b7e1631e/2021/02/16/bedacb3ec441ecd50d59915af27d4bb8.png"></p>
-<h2 id="四-配置OwnCloud"><a href="#四-配置OwnCloud" class="headerlink" title="四.配置OwnCloud"></a>四.配置OwnCloud</h2><h3 id="1-打开Apache配置文件"><a href="#1-打开Apache配置文件" class="headerlink" title="1.打开Apache配置文件"></a>1.打开Apache配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
-<h3 id="2-配置Apache"><a href="#2-配置Apache" class="headerlink" title="2.配置Apache"></a>2.配置Apache</h3><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按i键进入文件编辑模式，然后在内容后添加以下代码，最后按esc键退出编辑模式，然后输入:wq保存并退出配置文件。<br></font></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># owncloud config</span></span><br><span class="line">Alias /owncloud <span class="string">&quot;/var/www/html/owncloud/&quot;</span></span><br><span class="line">&lt;Directory /var/www/html/owncloud/&gt;</span><br><span class="line">    Options +FollowSymlinks</span><br><span class="line">    AllowOverride All</span><br><span class="line">    &lt;IfModule mod_dav.c&gt;</span><br><span class="line">        Dav off</span><br><span class="line">    &lt;/IfModule&gt;</span><br><span class="line">    SetEnv HOME /var/www/html/owncloud</span><br><span class="line">    SetEnv HTTP_HOME /var/www/html/owncloud</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@c0f82959dd045db0b29d9c5a5e74da0e1dac0093/2021/02/16/8c344fc4273183dea0f01b54be68cb16.png"></p>
-<h2 id="五-安装配置PHP"><a href="#五-安装配置PHP" class="headerlink" title="五.安装配置PHP"></a>五.安装配置PHP</h2><h3 id="1-更新rpm源"><a href="#1-更新rpm源" class="headerlink" title="1.更新rpm源"></a>1.更新rpm源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm   </span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-安装PHP-7-2"><a href="#2-安装PHP-7-2" class="headerlink" title="2.安装PHP 7.2"></a>2.安装PHP 7.2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install php72w</span><br><span class="line">yum -y install php72w-cli php72w-common php72w-devel php72w-mysql php72w-xml php72w-odbc php72w-gd php72w-intl php72w-mbstring</span><br></pre></td></tr></table></figure>
-<h3 id="3-是否安装成功"><a href="#3-是否安装成功" class="headerlink" title="3.是否安装成功"></a>3.是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -v</span><br></pre></td></tr></table></figure>
-
-<h2 id="六-将PHP配置到Apache中"><a href="#六-将PHP配置到Apache中" class="headerlink" title="六.将PHP配置到Apache中"></a>六.将PHP配置到Apache中</h2><h3 id="1-找到php-ini文件目录"><a href="#1-找到php-ini文件目录" class="headerlink" title="1.找到php.ini文件目录"></a>1.找到php.ini文件目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name php.ini</span><br></pre></td></tr></table></figure>
-<h3 id="2-打开httpd-conf文件"><a href="#2-打开httpd-conf文件" class="headerlink" title="2.打开httpd.conf文件"></a>2.打开httpd.conf文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
-<h3 id="3-按i键进入文件编辑模式，然后在文件最后添加以下内容"><a href="#3-按i键进入文件编辑模式，然后在文件最后添加以下内容" class="headerlink" title="3.按i键进入文件编辑模式，然后在文件最后添加以下内容"></a>3.按i键进入文件编辑模式，然后在文件最后添加以下内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHPIniDir /etc/php.ini</span><br></pre></td></tr></table></figure>
-<h3 id="4-重启Apache服务"><a href="#4-重启Apache服务" class="headerlink" title="4.重启Apache服务"></a>4.重启Apache服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd.service</span><br></pre></td></tr></table></figure>
-<h2 id="七-配置OwnCloud"><a href="#七-配置OwnCloud" class="headerlink" title="七.配置OwnCloud"></a>七.配置OwnCloud</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建管理员账号和密码，然后单击存储&amp;数据库，配置数据库，最后单击安装完成<br></font></p>
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@e0f56f493fdcdc2b5667791f59e856a77bee453c/2021/02/16/dde0725f0ae37dfd198df178bb0f0d39.png"></p>
-
+    <p><font color=#b275bc size=3>&emsp;&emsp;对python秒杀程序进行一个简单的打包<br></font></p>
+    
+    <a class="article-more-a" href="/article/7e49a571.html#more">more >></a>
+    
     
 
     
@@ -271,219 +241,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CentOS云盘</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/article/347f0c0d.html">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Centos下安装ftp服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/article/f37541b.html" target="_blank">Centos7下安装ftp服务</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/article/f37541b.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><font color=#b275bc size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在CentOS下安装ftp服务以便于可以在本地可以进行一个文件的传输和交互。虽然CentOS出于某些原因将被CentOS Stream替代而且还是一个将进行一个收费的软件，不过CentOS生命周期还有2–3年，相信白嫖怪们不会受制于人的。直接上命令<br></font></p>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd -y <span class="comment"># 安装vsftp软件</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line">systemctl status vsftpd</span><br><span class="line">useradd xxxx <span class="comment"># 为Linux添加其他用户，将其作为ftp服务存放的目录</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;123456&#x27;</span> | passwd --stdin xxxx <span class="comment"># 给用户设置一个密码如123456</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chkconfig vsftpd on <span class="comment"># 设置开机自启动</span></span><br><span class="line">service vsftpd restart <span class="comment"># 重新启动ftp服务</span></span><br><span class="line">netstat -antup | grep ftp <span class="comment"># 查看ftp服务端口</span></span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><font size=3>
-1. /etc/vsftpd/vsftpd.conf # 主配置文件，核心配置文件
-2. /etc/vsftpd/ftpusers # 黑名单，这个里面的用户不允许访问FTP服务器
-3. /etc/vsftpd/user_list # 白名单，允许访问FTP服务器的用户列表
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果是阿里云服务器的话，需要在安全组设置里面打开相应的端口。
-
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@154887b3a2e853479a1e1d7f65d0b7b5d4c6c867/2021/02/15/2282943f6397b0e3a9a8eb95df31ce50.png"><br>默认是21，如果不行换成22端口就行了。21如果不能连是配置出了，问题可以百度解决，但是22是可以使用的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@c111ab38901dbef387d750fd76dd6db80c612834/2021/02/15/c2479205770b6fb59f06913528e03e52.png"><br></font></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Centos下安装ftp服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/article/f37541b.html">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BiliBili视频倍速" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/article/414bc77e.html" target="_blank">BiliBili视频倍速</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/article/414bc77e.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.284Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><font color=#b275bc size=3>&ensp;&ensp;B站突然就不能倍速播放了，如果要倍速需要提前下载，简直不能忍，使用python进行调用本地播放器进行倍速播放。2022更新：可以使用TamperMonkey加<a target="_blank" rel="noopener" href="https://github.com/the1812/Bilibili-Evolved">BilibiliEvolved插件</a><br></font></p>
-<h2 id="1-安装FFmpeg，Potplayer和python3"><a href="#1-安装FFmpeg，Potplayer和python3" class="headerlink" title="1.安装FFmpeg，Potplayer和python3"></a>1.安装FFmpeg，Potplayer和python3</h2><p><font size=3>&ensp;&ensp;FFmpeg下载链接<a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds">Github网址</a>，之后将bin加入系统path路径<br>&ensp;&ensp;完美解码集成了Potplayer还有Potplayer需要的一些组件，建议直接安装完美解码<a target="_blank" rel="noopener" href="https://jm.wmzhe.com/">完美解码</a>之后将PotPlayerMini64.exe位置加入系统path路径<br>&ensp;&ensp;python3安装记得选择pip，如果是其他环境，如Anaconda3，可以把最后生成的exe复制到一个文件夹，添加到系统path路径即可<br></font></p>
-<h2 id="2-安装ykdl等"><a href="#2-安装ykdl等" class="headerlink" title="2.安装ykdl等"></a>2.安装ykdl等</h2><p><font size=3>&ensp;&ensp;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ykdl -h 回车，如出现帮助内容则表示成功</span></span><br><span class="line">pip install --upgrade ykdl</span><br><span class="line"></span><br><span class="line">pip install --upgrade you-get</span><br><span class="line"></span><br><span class="line">pip install --upgrade youtube-dl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</font>
-
-
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p><font size=3>&ensp;&ensp;输入下面命令即可，最高12倍速</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ykdl -p PotPlayerMini64 视频地址</span><br></pre></td></tr></table></figure>
-<p>运行结果：<br><img src="https://cdn.jsdelivr.net/gh/windfill/CDN@d8a2bd3ddc46422cc09116fa1db6829b31e62df7/2021/11/19/f76f7459c1d028eba8300c0e58246d2a.png"><br><img src="https://cdn.jsdelivr.net/gh/windfill/CDN@06670c642e23f9c64be432c8a191b5c9ea8af6a6/2021/11/19/be71f35293ff992fc3d9d8e1a3156102.png"><br></font></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bilibili</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Pyinstaller</a>
         		</li>
       		
 		</ul>
@@ -504,7 +262,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/article/414bc77e.html">展开全文 >></a>
+      <a class="article-more-a" href="/article/7e49a571.html">展开全文 >></a>
     </p>
     
 
@@ -532,9 +290,8 @@
 
 
 
-
   
-    <article id="post-ARM64安装TeamViewer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Linux换源" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -542,7 +299,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/article/79231136.html" target="_blank">ARM64安装TeamViewer</a>
+	  <a class="article-title" href="/article/18f26aa6.html" target="_blank">Linux换源</a>
   
     </h1>
   
@@ -550,8 +307,8 @@
 
   
   
-<a href="/article/79231136.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.280Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+<a href="/article/18f26aa6.html" class="archive-article-date">
+        <time datetime="2021-02-02T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-02</time>
 </a>
 
   
@@ -563,16 +320,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&ensp;&ensp;便于调Robocom的车<br></font></p>
-<h2 id="1-过程"><a href="#1-过程" class="headerlink" title="1.过程"></a>1.过程</h2><p><font size=3>&ensp;&ensp;TeamViewer其实还没有官方的arm64版，安装的其实是TeamViewer Host for Raspberry Pi。树莓派版为armhf架构，于是需要装一些armhf的依赖，linux文件管理器下打开一个文件夹（不常用或者新建一个文件夹，命令：mkdir xxxx），目录中右键Open in terminal 打开窗口输入下面：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/apt/sources.list https://repo.huaweicloud.com/repository/conf/Ubuntu-Ports-bionic.list</span><br></pre></td></tr></table></figure>
-<p>&ensp;&ensp;然后去设置里面关掉其他仓库不然会全部索引一遍</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo dpkg --add-architecture armhf</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install libxtst6:armhf</span><br></pre></td></tr></table></figure>
-<p>&ensp;&ensp;然后下载teamviewer_15.22.3_arm64.deb <a target="_blank" rel="noopener" href="https://www.teamviewer.com/en/download/raspberry-pi/">下载链接</a></p>
-<p>&ensp;&ensp;安装命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i teamviewer_15.22.3_arm64.deb</span><br></pre></td></tr></table></figure>
-</font>
-
+    <p><font color=#b275bc size=3>&emsp;&emsp;Linux换源是学习的第一步，也是有很多坑的第一步，记录一下</font>
+    
+    <a class="article-more-a" href="/article/18f26aa6.html#more">more >></a>
+    
     
 
     
@@ -588,7 +339,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ARM64</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Linux换源</a>
         		</li>
       		
 		</ul>
@@ -609,7 +360,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/article/79231136.html">展开全文 >></a>
+      <a class="article-more-a" href="/article/18f26aa6.html">展开全文 >></a>
     </p>
     
 
@@ -637,9 +388,8 @@
 
 
 
-
   
-    <article id="post-Anaconda3的简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-不必把太多人请进生命里" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -647,7 +397,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/article/32dfda02.html" target="_blank">Anaconda3的简单使用</a>
+	  <a class="article-title" href="/article/a274eecc.html" target="_blank">不必把太多人请进生命里</a>
   
     </h1>
   
@@ -655,8 +405,8 @@
 
   
   
-<a href="/article/32dfda02.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.279Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+<a href="/article/a274eecc.html" class="archive-article-date">
+        <time datetime="2021-02-01T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
 </a>
 
   
@@ -668,39 +418,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一次接触Anaconda3是为了节约时间安装各种python的包，开始我嫌弃其体积臃肿，换成了单纯的pip，但是在使用的过程中，我发现Anaconda3有其很多的优势，有些方面甚至是不可替代的。这里简单记录一下windows下的Anaconda3的使用心得便于后面进行一个复习。<br></font></p>
-<h2 id="1-创建虚拟环境"><a href="#1-创建虚拟环境" class="headerlink" title="1.创建虚拟环境"></a>1.创建虚拟环境</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用命令进行一个简单的创建虚拟环境</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#初始化</span><br><span class="line">conda init</span><br><span class="line"></span><br><span class="line">#创建环境</span><br><span class="line">conda create -n env_name python=<span class="number">3</span>.<span class="number">7</span></span><br><span class="line"></span><br><span class="line">#同时安装必要的包</span><br><span class="line">conda create -n env_name numpy matplotlib python=<span class="number">3</span>.<span class="number">7</span></span><br><span class="line"></span><br><span class="line">#查看安装了哪些虚拟环境</span><br><span class="line">conda env list</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#激活虚拟环境</span><br><span class="line">activate env_name</span><br><span class="line">conda activate env_name</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/For-px/CDN@09091fe6e4202b67cbb35272d38c9d17d049e122/2021/04/17/db6480383ba175bb1450d505930859d4.png"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;之后就可以安装一些列需要安装的包了</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-</font>
-
-<h2 id="2-删除Anaconda3虚拟环境"><a href="#2-删除Anaconda3虚拟环境" class="headerlink" title="2.删除Anaconda3虚拟环境"></a>2.删除Anaconda3虚拟环境</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用命令进行一个虚拟环境的删除</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#删除环境</span><br><span class="line">conda remove --name env_name --all</span><br><span class="line"></span><br><span class="line">#退出环境</span><br><span class="line">conda deactivate env_name</span><br></pre></td></tr></table></figure>
-</font>
-
-
-<h2 id="3-Anaconda3换源"><a href="#3-Anaconda3换源" class="headerlink" title="3.Anaconda3换源"></a>3.Anaconda3换源</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行下面两个命令，目录C:\Users下就会生成配置文件.condarc直接编辑就好</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查看是否配置正确</span><br><span class="line">conda info</span><br></pre></td></tr></table></figure>
-</font>
-
-<h2 id="4-导出requirements-txt"><a href="#4-导出requirements-txt" class="headerlink" title="4.导出requirements.txt"></a>4.导出requirements.txt</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有三种方法，但是个人认为前面两种都不好，简直是乱来。在做人脸识别的时候，可能项目太大了，使用前面两种都不行，第二种还瞎给我安装一堆东西。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一种，适合于单个python环境</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install freeze</span><br><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二种，感觉在乱来，不过还是记录一下</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pigar</span><br><span class="line">pigar -c D:\Codesave\yoloV5_arcface</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三种，个人感觉最好</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pipreqs</span><br><span class="line">pipreqs D:\Codesave\yoloV5_arcface --encoding=utf8 --force</span><br><span class="line">pipreqs D:\Codesave\yoloV5_arcface --encoding=utf8</span><br></pre></td></tr></table></figure>
-</font>
-
-
-
-
-
-
-
+    <p><font color=#b275bc size=3>&emsp;&emsp;ISBN：978-7-5585-0025-1，记录一下看完此书的想法和一些思考。
+    
+    <a class="article-more-a" href="/article/a274eecc.html#more">more >></a>
+    
     
 
     
@@ -716,7 +437,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Anaconda3</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">不必把太多人请进生命里</a>
         		</li>
       		
 		</ul>
@@ -728,7 +449,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -737,7 +458,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/article/32dfda02.html">展开全文 >></a>
+      <a class="article-more-a" href="/article/a274eecc.html">展开全文 >></a>
     </p>
     
 
@@ -765,9 +486,8 @@
 
 
 
-
   
-    <article id="post-Adobe全家桶的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Linux安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -775,7 +495,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/article/a5744e02.html" target="_blank">Adobe全家桶的安装</a>
+	  <a class="article-title" href="/article/9377051a.html" target="_blank">Linux安装</a>
   
     </h1>
   
@@ -783,8 +503,8 @@
 
   
   
-<a href="/article/a5744e02.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.278Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+<a href="/article/9377051a.html" class="archive-article-date">
+        <time datetime="2021-02-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
 </a>
 
   
@@ -796,11 +516,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;记录一下Adobe全家桶的下载链接<br></font></p>
-<h2 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载地址如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解压密码：@vposy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百度云：<a target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=PbZ_7CFguLe7xcUGSGU5jg">https://pan.baidu.com/share/init?surl=PbZ_7CFguLe7xcUGSGU5jg</a> 提取码：gvm5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天翼云：<a target="_blank" rel="noopener" href="https://cloud.189.cn/web/share?code=bQjE7zQnIrYj">https://cloud.189.cn/web/share?code=bQjE7zQnIrYj</a> 访问码：q8vc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;链接挂了微博直接搜索vposy<br></font></p>
-<h2 id="2-区别"><a href="#2-区别" class="headerlink" title="2.区别"></a>2.区别</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大师版就是全部安装<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SP版就是单独安装的版本<br></font></p>
-<h2 id="3-天翼网盘直接下载"><a href="#3-天翼网盘直接下载" class="headerlink" title="3.天翼网盘直接下载"></a>3.天翼网盘直接下载</h2><p><font size=3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载油猴插件，在<a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/423948">greasyfork</a>下载脚本，因为时间关系可能无法可以使用，如果不能下载个客户端或者百度网盘<br></font></p>
-
+    <p><font color=#b275bc size=3>&emsp;&emsp;Linux充满了挑战，作为一个喜欢折腾的人，当然需要对其进行探索，这里提供三种方法。</font></p>
+    
+    <a class="article-more-a" href="/article/9377051a.html#more">more >></a>
+    
     
 
     
@@ -816,7 +535,109 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Linux安装</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/article/9377051a.html">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-Windows去自动更新和Defender" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/article/880e9dec.html" target="_blank">Windows去自动更新和Defender</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/article/880e9dec.html" class="archive-article-date">
+        <time datetime="2021-01-31T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-31</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><font color=#b275bc size=3>&emsp;&emsp;win系统作为主流的操作系统之一，其良好的生态和简便的操作，都对用户十分友好，不友好的是一些设置，因为各版本不一样，以下可能大同小异</font></p>
+    
+    <a class="article-more-a" href="/article/880e9dec.html#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">自动更新</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Defender</a>
         		</li>
       		
 		</ul>
@@ -837,7 +658,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/article/a5744e02.html">展开全文 >></a>
+      <a class="article-more-a" href="/article/880e9dec.html">展开全文 >></a>
     </p>
     
 
@@ -865,9 +686,8 @@
 
 
 
-
   
-    <article id="post-brave-new-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-pip换源" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -875,7 +695,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/article/dd6010f3.html" target="_blank">美丽新世界</a>
+	  <a class="article-title" href="/article/de3d7d0d.html" target="_blank">Win下pip换源</a>
   
     </h1>
   
@@ -883,8 +703,8 @@
 
   
   
-<a href="/article/dd6010f3.html" class="archive-article-date">
-        <time datetime="2017-02-10T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-10</time>
+<a href="/article/de3d7d0d.html" class="archive-article-date">
+        <time datetime="2021-01-30T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-30</time>
 </a>
 
   
@@ -896,13 +716,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28949128&auto=0&height=66" style="margin-left: -10px;"></iframe>
-
-<p>痛仰有一首歌，叫《美丽新世界》，它其实是向80年前赫胥黎的同名小说致敬。<br>歌里唱道：<br><strong>“这是一个离奇的梦也是冒险者的乐园<br>不在乎你在不在乎新的世界依旧美丽…”</strong></p>
-<p>乌托邦如此美好，但在那里，幸福的人们全都是“被幸福的”。<br>你的在乎与否无关紧要，只需要按照秩序继续漫步。</p>
-<p>春节把<a target="_blank" rel="noopener" href="https://movie.douban.com/subject/2338055/">《西部世界》</a>看完，它的一些设定，也很容易看出致敬小说的意思，却又带来了另外的惊喜。<br>片尾Dolores的惊艳一枪尘埃落定，现在已经过去一段时间，花哨的剪辑褪出了印象，细微的东西反而更加深刻了。<br>还是想谈一谈这部作品。(含剧透…)</p>
+    <p><font color=#b275bc size=3>&emsp;&emsp;Python有许多发行版本，Anaconda，CPython等等，用来用去自带的pip虽然不是最好，但是还是有很多可取之处
     
-    <a class="article-more-a" href="/article/dd6010f3.html#more">more >></a>
+    <a class="article-more-a" href="/article/de3d7d0d.html#more">more >></a>
     
     
 
@@ -919,21 +735,28 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">pip换源</a>
         		</li>
       		
 		</ul>
 	</div>
 
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/article/dd6010f3.html">展开全文 >></a>
+      <a class="article-more-a" href="/article/de3d7d0d.html">展开全文 >></a>
     </p>
     
 
@@ -959,6 +782,201 @@
     </div>
 </aside>
 
+
+
+  
+    <article id="post-快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/article/ff8068c0.html" target="_blank">快速排序</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/article/ff8068c0.html" class="archive-article-date">
+        <time datetime="2021-01-30T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-30</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><font color=#b275bc size=3>&emsp;&emsp;大概的思路是找到一个基点，然后遍历整个数组（C语言为例），使用左右两个索引然后，
+    
+    <a class="article-more-a" href="/article/ff8068c0.html#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">快速排序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Algorithm//" class="article-tag-list-link color5">Algorithm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/article/ff8068c0.html">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-折半查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/article/8dbf9480.html" target="_blank">折半查找</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/article/8dbf9480.html" class="archive-article-date">
+        <time datetime="2021-01-30T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-30</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><font color=#b275bc size=3>&emsp;&emsp;很简单从有序的数字的找到你想找到的数字，如果遍历的话显然太慢了，所以有了二分查找
+    
+    <a class="article-more-a" href="/article/8dbf9480.html#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">折半查找</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Algorithm//" class="article-tag-list-link color5">Algorithm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/article/8dbf9480.html">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
 
 
 
@@ -1088,15 +1106,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
+                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1104,11 +1118,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CentOS云盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1132,19 +1150,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">RoboMaster</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">VB的坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1164,10 +1182,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">重装系统</a>
               </li>
              
@@ -1176,15 +1190,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1192,15 +1198,11 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">不必把太多人请进生命里</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1208,7 +1210,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1216,11 +1222,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
+                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1232,7 +1238,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">折半查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1401,11 +1415,11 @@
       jsonPath: modelJsonPath
     },
     display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
+       position: "left", 
+       width: 140, 
+       height: 280, 
       
+       vOffset: 10 
     },
     mobile: {
        show: false, 
@@ -1420,16 +1434,8 @@
 
   
   
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
-  
 </body>
-
+<script src="https://myhkw.cn/api/player/159772488317" id="myhk" key="159772488317" m="1"></script>
+<script src="/sakura.js"></script>
+<script src="/mouse_snow.min.js"></script>
 </html>

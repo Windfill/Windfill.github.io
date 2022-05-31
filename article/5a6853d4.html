@@ -6,27 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://windfill.gitee.io">
-  <title>VB增强功能 | windfill&#39;s Blog</title>
+  <title>VB增强功能 | Windfill&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;ensp;&amp;ensp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，但是VB也有很多坑，特别是其增强功能的安装有时候是一个坑，这里以CentOS8为例子记录一下。 1.换源&amp;ensp;&amp;ensp;CentOS8貌似可以使用的只有阿里源了备份旧的配置文件 1sudo mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d">
+  <meta name="description" content="&amp;emsp;&amp;emsp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VB增强功能">
 <meta property="og:url" content="https://windfill.gitee.io/article/5a6853d4.html">
-<meta property="og:site_name" content="windfill&#39;s Blog">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，但是VB也有很多坑，特别是其增强功能的安装有时候是一个坑，这里以CentOS8为例子记录一下。 1.换源&amp;ensp;&amp;ensp;CentOS8貌似可以使用的只有阿里源了备份旧的配置文件 1sudo mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d">
+<meta property="og:site_name" content="Windfill&#39;s Blog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-29T04:13:12.300Z">
-<meta property="article:modified_time" content="2021-12-01T14:13:54.252Z">
+<meta property="article:published_time" content="2021-12-01T02:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-31T03:56:23.536Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="VB的坑">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="windfill&#39;s Blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Windfill&#39;s Blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.png">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -42,9 +42,6 @@
 
   
 
-  
-    
- 	  <script src="/lib/clickLove.js"></script>
   
   
 
@@ -119,7 +116,7 @@
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
+        href="https://github.com/windfill" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
@@ -214,7 +211,7 @@
         </span>
 
 <a href="/article/5a6853d4.html" class="archive-article-date">
-        <time datetime="2022-05-29T04:13:12.300Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-29</time>
+        <time datetime="2021-12-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-01</time>
 </a>
 
   
@@ -247,8 +244,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&ensp;&ensp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，但是VB也有很多坑，特别是其增强功能的安装有时候是一个坑，这里以CentOS8为例子记录一下。<br></font></p>
-<h2 id="1-换源"><a href="#1-换源" class="headerlink" title="1.换源"></a>1.换源</h2><p><font size=3>&ensp;&ensp;CentOS8貌似可以使用的只有阿里源了<br>备份旧的配置文件</p>
+    <p><font color=#b275bc size=3>&emsp;&emsp;VirtualBox相比于VM对我来说可能更加合适，所以我更加喜欢VB，<span id="more"></span>但是VB也有很多坑，特别是其增强功能的安装有时候是一个坑，这里以CentOS8为例子记录一下。<br></font></p>
+<!--more-->
+
+
+<h2 id="1-换源"><a href="#1-换源" class="headerlink" title="1.换源"></a>1.换源</h2><p><font size=3>&emsp;&emsp;CentOS8貌似可以使用的只有阿里源了<br>备份旧的配置文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
 <p>下载新的 CentOS-Base.repo 到 /etc/yum.repos.d/</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-8.repo</span><br></pre></td></tr></table></figure>
@@ -258,14 +258,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
 </font>
 
-<h2 id="2-安装增强功能"><a href="#2-安装增强功能" class="headerlink" title="2.安装增强功能"></a>2.安装增强功能</h2><p><font size=3>&ensp;&ensp;首先需要安装相关的依赖</p>
+<h2 id="2-安装增强功能"><a href="#2-安装增强功能" class="headerlink" title="2.安装增强功能"></a>2.安装增强功能</h2><p><font size=3>&emsp;&emsp;首先需要安装相关的依赖</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install gcc perl make tar bzip2 elfutils-libelf-devel</span><br></pre></td></tr></table></figure>
 <p>&ensp;&ensp;安装kernel-devel（和内核版本一致）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y <span class="string">&quot;kernel-devel-uname-r == <span class="subst">$(uname -r)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 <p>&ensp;&ensp;或者通过DNF安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install tar bzip2 kernel-devel-$(<span class="built_in">uname</span> -r) kernel-headers perl gcc make elfutils-libelf-devel</span><br></pre></td></tr></table></figure>
 <p>&ensp;&ensp;最后，通过已经存在的ISO镜像安装文件就行了<br></font></p>
-<h2 id="3-CentOS常用命令"><a href="#3-CentOS常用命令" class="headerlink" title="3.CentOS常用命令"></a>3.CentOS常用命令</h2><p><font size=3>&ensp;&ensp;首先需要安装相关的依赖</p>
+<h2 id="3-CentOS常用命令"><a href="#3-CentOS常用命令" class="headerlink" title="3.CentOS常用命令"></a>3.CentOS常用命令</h2><p><font size=3>&emsp;&emsp;首先需要安装相关的依赖</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#升级所有包同时也升级软件和系统内核</span></span><br><span class="line">yum -y update</span><br><span class="line"></span><br><span class="line"><span class="comment">#只升级所有包，不升级软件和系统内核</span></span><br><span class="line">yum -y upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment">#升级内核</span></span><br><span class="line">yum update kernel</span><br><span class="line"></span><br><span class="line">安装：yum -y install package1 加上参数y后，所有的依赖均自动安装</span><br><span class="line">重新安装：yum reinstall package</span><br><span class="line">卸载：yum remove package</span><br><span class="line">更新：yum update package</span><br><span class="line">查找是否已安装某个软件包：yum search package</span><br><span class="line">降级：yum downgrage package</span><br><span class="line">检查可用的更新：yum check-update</span><br><span class="line">查询软件包的依赖：yum deplist package1</span><br></pre></td></tr></table></figure>
 </font>
     
@@ -287,7 +287,7 @@
         <li>
           <strong>版权声明： </strong>
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+          本作品采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议进行许可，转载请注明出处！
         </li>
         
       </ul>
@@ -343,8 +343,8 @@
     </a>
   
   
-    <a href="/article/23687f.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">RMUT交流</div>
+    <a href="/article/79231136.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ARM64安装TeamViewer</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -382,6 +382,33 @@
 
 
 
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "hExvlwGBBIHRP6fctjVwHAUN-gzGzoHsz",
+            app_key: "75zHM3vePrMEj9mFNwaEzEtz",
+            placeholder: "想对我说些什么(*´∇｀*)",
+            avatar:"monsterid"
+        });
+    }
+</script>
+
+  </section>
 
 
 
@@ -511,15 +538,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
+                <a href="javascript:void(0)" class="js-tag color1">ARM64</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -527,11 +550,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bilibili</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CentOS云盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Centos下安装ftp服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,19 +582,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">RoboMaster</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">VB的坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -587,10 +614,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">重装系统</a>
               </li>
              
@@ -599,15 +622,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+                <a href="javascript:void(0)" class="js-tag color5">Windows激活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -615,15 +630,11 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Pyinstaller</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">不必把太多人请进生命里</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,7 +642,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">刷机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -639,11 +654,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
+                <a href="javascript:void(0)" class="js-tag color5">合理上网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color5">行为识别</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -655,7 +670,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">折半查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -824,11 +847,11 @@
       jsonPath: modelJsonPath
     },
     display: {
-       position: "right", 
-       width: 145, 
-       height: 315, 
-       hOffset: 50, 
+       position: "left", 
+       width: 140, 
+       height: 280, 
       
+       vOffset: 10 
     },
     mobile: {
        show: false, 
@@ -843,16 +866,8 @@
 
   
   
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
-  
 </body>
-
+<script src="https://myhkw.cn/api/player/159772488317" id="myhk" key="159772488317" m="1"></script>
+<script src="/sakura.js"></script>
+<script src="/mouse_snow.min.js"></script>
 </html>
