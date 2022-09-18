@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://windfill.github.io/image/My20220727194417.jpg">
 <meta property="og:image" content="https://windfill.github.io/image/My20220727194520.jpg">
 <meta property="article:published_time" content="2022-06-16T10:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-18T14:06:51.466Z">
+<meta property="article:modified_time" content="2022-09-18T14:10:19.962Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="FFmpeg">
 <meta name="twitter:card" content="summary">
@@ -240,9 +240,9 @@
 
 <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p><font size=3>&emsp;&emsp;<a target="_blank" rel="noopener" href="https://github.com/FFmpeg/FFmpeg">Github官方仓库</a>，不过一般用不到。我们去<a target="_blank" rel="noopener" href="https://ffmpeg.org/">官方下载网站</a>，找到对应系统的版本，这里以Win进行说明。进入网站点击巨大的按钮Download，然后选择对应的系统版本。</p>
 <div align=center><img src="../image/My20220727194417.jpg" ><img/></div>
-&emsp;&emsp;这两个只是下载位置不一样而已，看看那个下载地址快就下那个就可以，一般gyan.dev更快，因为有7z压缩包（版本选择最新的release builds版本，git master builds是主分支实时更新的版本，不建议使用）。BtbN在Github上可能很慢（根据需求选择不同的协议，一般选择ffmpeg-n5.x-latest-win64-gpl-5.1.zip）
+&emsp;&emsp;这两个只是下载位置不一样而已，看看那个下载地址快就下那个就可以，一般gyan.dev更快，因为有7z压缩包（版本选择最新的release builds版本，git master builds是主分支实时更新的版本，不建议使用）。BtbN在Github上可能很慢（根据需求选择不同的协议，一般选择ffmpeg-nx.x-latest-win64-gpl-x.x.zip）
 <div align=center><img src="../image/My20220727194520.jpg" ><img/></div>
-&emsp;&emsp;以gyan.dev为例：release builds版本中，essential版本包含了常用的库，用来支持一般应用的执行，full版本是完整构建，shared版本添加了头文件和库，用来学习和调试程序。我们选择ffmpeg-release-full-shared.7z版本。最后，将下载好的压缩包解压，移动到你想要的位置，将目录下的bin目录加入系统环境变量就大功告成。</font>
+&emsp;&emsp;以gyan.dev为例：release builds版本中，essential版本包含了常用的库，用来支持一般应用的执行，full版本是完整构建，shared版本添加了头文件和库，用来学习和调试程序。一般选择ffmpeg-x.x.x-essentials_build.7z版本。最后，将下载好的压缩包解压，移动到你想要的位置，将目录下的bin目录加入系统环境变量就大功告成。</font>
 
 <p><font size=3>1. ffmpeg.exe：音视频转码、转换器<br>2. ffplay.exe：简单的音视频播放器<br>3. ffprobe.exe：简单的多媒体码流分析器<br></font></p>
 <h2 id="2-ts转换为mp4"><a href="#2-ts转换为mp4" class="headerlink" title="2.ts转换为mp4"></a>2.ts转换为mp4</h2><p><font size=3>&emsp;&emsp;<a target="_blank" rel="noopener" href="http://ffmpeg.org/documentation.html">官方教程文档</a></p>
