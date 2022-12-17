@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。">
+  <meta name="description" content="使用selenium实现网页的自动打卡">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python自动打卡">
 <meta property="og:url" content="https://windfill.github.io/article/382186c8.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。">
+<meta property="og:description" content="使用selenium实现网页的自动打卡">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-04T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-31T09:40:14.008Z">
+<meta property="article:modified_time" content="2022-12-17T18:30:04.400Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="自动打卡">
 <meta name="twitter:card" content="summary">
@@ -212,7 +212,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">576字</span>
+      <span class="post-count">407字</span>
     </span>
   </span>
 
@@ -221,7 +221,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -232,21 +232,22 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;使用python和selenium实现网页的自动打卡。以下代码只是一个思路的体现，可以根据自己的需求进行修改。<span id="more"></span>但是也有一个缺点，就是必须进行一个谷歌浏览器的打开才可以进行打卡，在一定的程度上使用范围不是那么广。还有关于验证码这块因为是截图，必然涉及一个屏幕分辨率的问题，所以其实使用python的爬虫才是一个最好的选择，可以部署到腾讯云函数，设置一个触发器进行定时的打卡。一位学长所写<a target="_blank" rel="noopener" href="https://gitee.com/ahaox/isp-cdu" title="isp打卡">https://gitee.com/ahaox/isp-cdu</a><br></font></p>
-<h2 id="1-浏览器打开"><a href="#1-浏览器打开" class="headerlink" title="1.浏览器打开"></a>1.浏览器打开</h2><font size=3>
+    <p><font color=#b275bc size=3>使用selenium实现网页的自动打卡</p>
+<span id="more"></span>
 </font>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver  <span class="comment"># 用于打开网站</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>): <span class="comment"># （这里使用了Python类）初始化函数</span></span><br><span class="line">    self.driver = webdriver.Chrome()</span><br><span class="line">    self.find_element = self.driver.find_element_by_css_selector</span><br><span class="line"></span><br><span class="line">    self.driver.maximize_window()  <span class="comment"># 窗口最大化，便于进行下一步截图</span></span><br><span class="line">    self.driver.get(log_in)  <span class="comment"># 打开你的登陆页面，log_in为网址</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-识别"><a href="#2-识别" class="headerlink" title="2.识别"></a>2.识别</h2><p><font size=3>&emsp;&emsp;看网站的类型，一些网站有验证码，而且是图片，本次的网站就是一个文本模式。这就让我很无从下手，最后想了下，干脆就截图来实现了。慢慢调整角度最后还是可以实现的。<br></font></p>
+<h2 id="1-浏览器打开"><a href="#1-浏览器打开" class="headerlink" title="1.浏览器打开"></a>1.浏览器打开</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver  <span class="comment"># 用于打开网站</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>): <span class="comment"># （这里使用了Python类）初始化函数</span></span><br><span class="line">    self.driver = webdriver.Chrome()</span><br><span class="line">    self.find_element = self.driver.find_element_by_css_selector</span><br><span class="line"></span><br><span class="line">    self.driver.maximize_window()  <span class="comment"># 窗口最大化，便于进行下一步截图</span></span><br><span class="line">    self.driver.get(log_in)  <span class="comment"># 打开你的登陆页面，log_in为网址</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-识别"><a href="#2-识别" class="headerlink" title="2.识别"></a>2.识别</h2><p><font size=3>看网站的类型，一些网站有验证码，而且是图片，本次的网站就是一个文本模式。这就让我很无从下手，最后想了下，干脆就截图来实现了。慢慢调整角度最后还是可以实现的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">self.driver.save_screenshot(<span class="string">&#x27;pictures.png&#x27;</span>)  <span class="comment"># 全屏截图</span></span><br><span class="line">page_snap_obj = Image.<span class="built_in">open</span>(<span class="string">&#x27;pictures.png&#x27;</span>)</span><br><span class="line">box = (<span class="number">1140</span>, <span class="number">820</span>, <span class="number">1200</span>, <span class="number">855</span>) <span class="comment"># 验证码位置</span></span><br><span class="line">image_obj = page_snap_obj.crop(box)</span><br><span class="line">image_obj.save(<span class="string">&#x27;ver_code.png&#x27;</span>)</span><br><span class="line"><span class="comment"># image_obj.show()  # 打开验证码</span></span><br><span class="line">image = Image.<span class="built_in">open</span>(<span class="string">&#x27;ver_code.png&#x27;</span>)</span><br><span class="line">pytesseract.pytesseract.tesseract_cmd = <span class="string">r&quot;C:\Users\Tesseract\tesseract.exe&quot;</span>  <span class="comment"># 设置Pyteseract路径</span></span><br><span class="line">result = pytesseract.image_to_string(image)  <span class="comment"># 图片转文字，进行识别</span></span><br></pre></td></tr></table></figure>
-<p><font size=3>&emsp;&emsp;最后还可以使用相关的正则表达去掉不需要的字符，Tesseract是一个谷歌的识别库可以用来直接进行识别。<br></font></p>
-<h2 id="3-窗口切换"><a href="#3-窗口切换" class="headerlink" title="3.窗口切换"></a>3.窗口切换</h2><p><font size=3>&emsp;&emsp;因为是进行窗口的跳转，就是直接重新打开一个窗口，需要进行一个跳转不然无法进行操作。<br></font></p>
+<p><font size=3>最后还可以使用相关的正则表达去掉不需要的字符，Tesseract是一个谷歌的识别库可以用来直接进行识别。             </p>
+<h2 id="3-窗口切换"><a href="#3-窗口切换" class="headerlink" title="3.窗口切换"></a>3.窗口切换</h2><p><font size=3>因为是进行窗口的跳转，就是直接重新打开一个窗口，需要进行一个跳转不然无法进行操作。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">all_handles = self.driver.window_handles</span><br><span class="line"><span class="keyword">for</span> window <span class="keyword">in</span> all_handles:</span><br><span class="line">    <span class="keyword">if</span> window != first_window_handle:</span><br><span class="line">        self.driver.switch_to.window(window)  <span class="comment"># 切换到非首页的窗口</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="4-点击"><a href="#4-点击" class="headerlink" title="4.点击"></a>4.点击</h2><p><font size=3>&emsp;&emsp;selenium模拟人进行一个点击。<br></font></p>
+<h2 id="4-点击"><a href="#4-点击" class="headerlink" title="4.点击"></a>4.点击</h2><p><font size=3>selenium模拟人进行一个点击。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActionChains(self.driver).move_by_offset(<span class="number">550</span>, <span class="number">505</span>).click().perform()</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-文件信息读取"><a href="#5-文件信息读取" class="headerlink" title="5.文件信息读取"></a>5.文件信息读取</h2><p><font size=3>&emsp;&emsp;从文件进行读取相关的数据<br></font></p>
+<h2 id="5-文件信息读取"><a href="#5-文件信息读取" class="headerlink" title="5.文件信息读取"></a>5.文件信息读取</h2><p><font size=3>从文件进行读取相关的数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;account.txt&#x27;</span>, <span class="string">&#x27;rt&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> acc:</span><br><span class="line">        account = acc.readline()</span><br></pre></td></tr></table></figure>
 
     

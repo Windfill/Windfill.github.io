@@ -10,18 +10,18 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;此教程来源于阿里官网。其实搭建一个简单的云盘很简单，不过要进行一个属于自己的diy还是有一定挑战的。">
+  <meta name="description" content="此教程来源于阿里云">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易云盘">
 <meta property="og:url" content="https://windfill.github.io/article/347f0c0d.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;此教程来源于阿里官网。其实搭建一个简单的云盘很简单，不过要进行一个属于自己的diy还是有一定挑战的。">
+<meta property="og:description" content="此教程来源于阿里云">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://windfill.github.io/image/bedacb3ec441ecd50d59915af27d4bb8.png">
 <meta property="og:image" content="https://windfill.github.io/image/8c344fc4273183dea0f01b54be68cb16.png">
 <meta property="og:image" content="https://windfill.github.io/image/dde0725f0ae37dfd198df178bb0f0d39.png">
 <meta property="article:published_time" content="2021-02-06T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-20T02:04:57.187Z">
+<meta property="article:modified_time" content="2022-12-17T17:57:50.813Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="云盘">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">531字</span>
+      <span class="post-count">484字</span>
     </span>
   </span>
 
@@ -236,9 +236,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;此教程来源于阿里官网。其实搭建一个简单的云盘很简单，不过要进行一个属于自己的diy还是有一定挑战的。<br></font></p>
+    <p><font color=#b275bc size=3>此教程来源于阿里云<br></font></p>
 <span id="more"></span>
-<h2 id="一-链接服务器"><a href="#一-链接服务器" class="headerlink" title="一.链接服务器"></a>一.链接服务器</h2><p><font size=3>&emsp;&emsp;使用ssh命令。</p>
+<h2 id="一-链接服务器"><a href="#一-链接服务器" class="headerlink" title="一.链接服务器"></a>一.链接服务器</h2><p><font size=3>使用ssh命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh root@你服务器的公网IP <span class="comment"># 链接</span></span><br><span class="line">ssh-keygen -R 你服务器的公网IP <span class="comment"># 这个是服务器重装系统或者换系统需要手动改变一下密钥</span></span><br></pre></td></tr></table></figure>
 </font>
 
@@ -248,12 +248,12 @@
 
 <h2 id="三-安装-Apache-服务"><a href="#三-安装-Apache-服务" class="headerlink" title="三.安装 Apache 服务"></a>三.安装 Apache 服务</h2><h3 id="1-安装Apache"><a href="#1-安装Apache" class="headerlink" title="1.安装Apache"></a>1.安装Apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd –y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="2-启动Apache"><a href="#2-启动Apache" class="headerlink" title="2.启动Apache"></a>2.启动Apache</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure>
-<h3 id="3-验证是否安装成功"><a href="#3-验证是否安装成功" class="headerlink" title="3.验证是否安装成功"></a>3.验证是否安装成功</h3><p><font size=3>&emsp;&emsp;打开浏览器输入公网IP，如果出现如下图内容表示Apache安装成功</font></p>
+<h3 id="3-验证是否安装成功"><a href="#3-验证是否安装成功" class="headerlink" title="3.验证是否安装成功"></a>3.验证是否安装成功</h3><p><font size=3>打开浏览器输入公网IP，如果出现如下图内容表示Apache安装成功</font></p>
 <div align=center><img src="../image/bedacb3ec441ecd50d59915af27d4bb8.png" ><img/></div>
 
 
 <h2 id="四-配置OwnCloud"><a href="#四-配置OwnCloud" class="headerlink" title="四.配置OwnCloud"></a>四.配置OwnCloud</h2><h3 id="1-打开Apache配置文件"><a href="#1-打开Apache配置文件" class="headerlink" title="1.打开Apache配置文件"></a>1.打开Apache配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
-<h3 id="2-配置Apache"><a href="#2-配置Apache" class="headerlink" title="2.配置Apache"></a>2.配置Apache</h3><p><font size=3>&emsp;&emsp;按i键进入文件编辑模式，然后在内容后添加以下代码，最后按esc键退出编辑模式，然后输入:wq保存并退出配置文件。<br></font></p>
+<h3 id="2-配置Apache"><a href="#2-配置Apache" class="headerlink" title="2.配置Apache"></a>2.配置Apache</h3><p><font size=3>按i键进入文件编辑模式，然后在内容后添加以下代码，最后按esc键退出编辑模式，然后输入:wq保存并退出配置文件。<br></font></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># owncloud config</span></span><br><span class="line">Alias /owncloud <span class="string">&quot;/var/www/html/owncloud/&quot;</span></span><br><span class="line">&lt;Directory /var/www/html/owncloud/&gt;</span><br><span class="line">    Options +FollowSymlinks</span><br><span class="line">    AllowOverride All</span><br><span class="line">    &lt;IfModule mod_dav.c&gt;</span><br><span class="line">        Dav off</span><br><span class="line">    &lt;/IfModule&gt;</span><br><span class="line">    SetEnv HOME /var/www/html/owncloud</span><br><span class="line">    SetEnv HTTP_HOME /var/www/html/owncloud</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
 
 <div align=center><img src="../image/8c344fc4273183dea0f01b54be68cb16.png" ><img/></div>
@@ -269,7 +269,7 @@
 <h3 id="2-打开httpd-conf文件"><a href="#2-打开httpd-conf文件" class="headerlink" title="2.打开httpd.conf文件"></a>2.打开httpd.conf文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/httpd/conf/httpd.conf</span><br></pre></td></tr></table></figure>
 <h3 id="3-按i键进入文件编辑模式，然后在文件最后添加以下内容"><a href="#3-按i键进入文件编辑模式，然后在文件最后添加以下内容" class="headerlink" title="3.按i键进入文件编辑模式，然后在文件最后添加以下内容"></a>3.按i键进入文件编辑模式，然后在文件最后添加以下内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHPIniDir /etc/php.ini</span><br></pre></td></tr></table></figure>
 <h3 id="4-重启Apache服务"><a href="#4-重启Apache服务" class="headerlink" title="4.重启Apache服务"></a>4.重启Apache服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd.service</span><br></pre></td></tr></table></figure>
-<h2 id="七-配置OwnCloud"><a href="#七-配置OwnCloud" class="headerlink" title="七.配置OwnCloud"></a>七.配置OwnCloud</h2><p><font size=3>&emsp;&emsp;创建管理员账号和密码，然后单击存储&amp;数据库，配置数据库，最后单击安装完成<br></font></p>
+<h2 id="七-配置OwnCloud"><a href="#七-配置OwnCloud" class="headerlink" title="七.配置OwnCloud"></a>七.配置OwnCloud</h2><p><font size=3>创建管理员账号和密码，然后单击存储&amp;数据库，配置数据库，最后单击安装完成<br></font></p>
 <div align=center><img src="../image/dde0725f0ae37dfd198df178bb0f0d39.png" ><img/></div>
     
 
@@ -336,11 +336,11 @@
 
 <nav id="article-nav">
   
-    <a href="/article/131eed20.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/article/1985c090.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          刷机，以MI6为例
+          Windows激活命令
         
       </div>
     </a>

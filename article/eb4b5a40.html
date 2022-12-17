@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;尝试Sublime Text 4的经历">
+  <meta name="description" content="尝试Sublime Text 4的经历">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text 4">
 <meta property="og:url" content="https://windfill.github.io/article/eb4b5a40.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;尝试Sublime Text 4的经历">
+<meta property="og:description" content="尝试Sublime Text 4的经历">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-22T09:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-30T13:05:30.826Z">
+<meta property="article:modified_time" content="2022-12-17T17:53:02.654Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="SublimeText">
 <meta name="twitter:card" content="summary">
@@ -212,7 +212,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">389字</span>
+      <span class="post-count">367字</span>
     </span>
   </span>
 
@@ -232,20 +232,20 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;尝试<em>Sublime Text 4</em>的经历</p>
+    <p><font color=#b275bc size=3>尝试<em>Sublime Text 4</em>的经历</p>
 <span id="more"></span>
 </font>
 
-<h2 id="1-Windows下安装"><a href="#1-Windows下安装" class="headerlink" title="1.Windows下安装"></a>1.Windows下安装</h2><p><font size=3>&emsp;&emsp;还是觉得Notepad++更加好用。Sublime Text 4下载链接：<a target="_blank" rel="noopener" href="https://www.sublimetext.com/">官网</a>，下载4版本就可以，有很多的功能，但是如果不破解好像不能使用插件。<br>&emsp;&emsp;然后一步步进行安装，然后就可以进行一个简单的使用了<br></font></p>
-<h2 id="2-Win下配置教程"><a href="#2-Win下配置教程" class="headerlink" title="2.Win下配置教程"></a>2.Win下配置教程</h2><p><font size=3>&emsp;&emsp; <em>Ctrl+Shift+P</em> , 输入：install 选中 <em>Package Control:Install Package</em> 回车，然后输入ChineseLocalizations回车，就可以汉化了。<br>&emsp;&emsp;<em>Preferences -&gt; Settings</em>（首选项 -&gt; 设置），禁用更新：</p>
+<h2 id="1-Windows下安装"><a href="#1-Windows下安装" class="headerlink" title="1.Windows下安装"></a>1.Windows下安装</h2><p><font size=3>还是觉得Notepad++更加好用。Sublime Text 4下载链接：<a target="_blank" rel="noopener" href="https://www.sublimetext.com/">官网</a>，下载4版本就可以，有很多的功能，但是如果不破解好像不能使用插件。<br>然后一步步进行安装，然后就可以进行一个简单的使用了<br></font></p>
+<h2 id="2-Win下配置教程"><a href="#2-Win下配置教程" class="headerlink" title="2.Win下配置教程"></a>2.Win下配置教程</h2><p><font size=3> <em>Ctrl+Shift+P</em> , 输入：install 选中 <em>Package Control:Install Package</em> 回车，然后输入ChineseLocalizations回车，就可以汉化了。<br><em>Preferences -&gt; Settings</em>（首选项 -&gt; 设置），禁用更新：</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;update_check&quot;:false</span><br></pre></td></tr></table></figure>
 </font>
 
 
-<h2 id="3-Win手动添加，右键以SublimeText打开"><a href="#3-Win手动添加，右键以SublimeText打开" class="headerlink" title="3.Win手动添加，右键以SublimeText打开"></a>3.Win手动添加，右键以SublimeText打开</h2><p><font size=3>&emsp;&emsp;新建txt，改名为 <em>sublime_add.reg</em>,将下面的内容复制进去，然后以管理员权限进行运行。</p>
+<h2 id="3-Win手动添加，右键以SublimeText打开"><a href="#3-Win手动添加，右键以SublimeText打开" class="headerlink" title="3.Win手动添加，右键以SublimeText打开"></a>3.Win手动添加，右键以SublimeText打开</h2><p><font size=3>新建txt，改名为 <em>sublime_add.reg</em>,将下面的内容复制进去，然后以管理员权限进行运行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\SublimeText3]</span><br><span class="line"></span><br><span class="line">@=&quot;Edit With SublimeText&quot;</span><br><span class="line"></span><br><span class="line">&quot;Icon&quot;=&quot;D:\\ProgramFiles\\Sublime4\\sublime_text.exe,0&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\SublimeText3\command]</span><br><span class="line"></span><br><span class="line">@=&quot;D:\\ProgramFiles\\Sublime4\\sublime_text.exe %1&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3]</span><br><span class="line"></span><br><span class="line">@=&quot;Edit With SublimeText&quot;</span><br><span class="line"></span><br><span class="line">&quot;Icon&quot;=&quot;D:\\ProgramFiles\\Sublime4\\sublime_text.exe,0&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\SublimeText3\command]</span><br><span class="line"></span><br><span class="line">@=&quot;D:\\ProgramFiles\\Sublime4\\sublime_text.exe %1&quot;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;@是安装的文件路径。<br></font></p>
-<h2 id="4-Linux下安装"><a href="#4-Linux下安装" class="headerlink" title="4.Linux下安装"></a>4.Linux下安装</h2><p><font size=3>&emsp;&emsp;按照以下命令安装，以 <em>Ubuntu18.04LTS</em> 为例</p>
+<p>@是安装的文件路径。<br></font></p>
+<h2 id="4-Linux下安装"><a href="#4-Linux下安装" class="headerlink" title="4.Linux下安装"></a>4.Linux下安装</h2><p><font size=3>按照以下命令安装，以 <em>Ubuntu18.04LTS</em> 为例</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br></pre></td></tr></table></figure>
@@ -258,13 +258,13 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install sublime-text -y</span><br></pre></td></tr></table></figure>
 
-<p>&emsp;&emsp;如果没有安装git的话</p>
+<p>如果没有安装git的话</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git -y</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/lyfeyaj/sublime-text-imfix.git</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> sublime-text-imfix &amp;&amp; ./sublime-imfix</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;插件安装和Windows下面一样<br></font></p>
+<p>插件安装和Windows下面一样<br></font></p>
 
     
 

@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;第一次接触Anaconda3是为了节约时间安装各种python的包，">
+  <meta name="description" content="Anaconda3的简单使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Anaconda3的简单使用">
 <meta property="og:url" content="https://windfill.github.io/article/32dfda02.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;第一次接触Anaconda3是为了节约时间安装各种python的包，">
+<meta property="og:description" content="Anaconda3的简单使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://windfill.github.io/image/db6480383ba175bb1450d505930859d4.png">
 <meta property="article:published_time" content="2021-04-17T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-10T10:34:42.763Z">
+<meta property="article:modified_time" content="2022-12-17T18:18:49.050Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="多解释器">
 <meta name="twitter:card" content="summary">
@@ -214,7 +214,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">559字</span>
+      <span class="post-count">422字</span>
     </span>
   </span>
 
@@ -234,8 +234,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;第一次接触Anaconda3是为了节约时间安装各种python的包，<span id="more"></span>开始我嫌弃其体积臃肿，换成了单纯的pip，但是在使用的过程中，我发现Anaconda3有其很多的优势，有些方面甚至是不可替代的。这里简单记录一下windows下的Anaconda3的使用心得便于后面进行一个复习。<br></font></p>
-<h2 id="1-创建虚拟环境"><a href="#1-创建虚拟环境" class="headerlink" title="1.创建虚拟环境"></a>1.创建虚拟环境</h2><p><font size=3>&emsp;&emsp;使用命令进行一个简单的创建虚拟环境</p>
+    <p><font color=#b275bc size=3>Anaconda3的简单使用</p>
+<span id="more"></span>
+</font>
+
+
+<h2 id="1-创建虚拟环境"><a href="#1-创建虚拟环境" class="headerlink" title="1.创建虚拟环境"></a>1.创建虚拟环境</h2><p><font size=3>使用命令进行一个简单的创建虚拟环境</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#初始化</span><br><span class="line">conda init</span><br><span class="line"></span><br><span class="line">#创建环境</span><br><span class="line">conda create -n env_name python=<span class="number">3</span>.<span class="number">7</span></span><br><span class="line"></span><br><span class="line">#同时安装必要的包</span><br><span class="line">conda create -n env_name numpy matplotlib python=<span class="number">3</span>.<span class="number">7</span></span><br><span class="line"></span><br><span class="line">#查看安装了哪些虚拟环境</span><br><span class="line">conda env list</span><br></pre></td></tr></table></figure>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#激活虚拟环境</span><br><span class="line">activate env_name</span><br><span class="line">conda activate env_name</span><br></pre></td></tr></table></figure>
 <div align=center><img src="../image/db6480383ba175bb1450d505930859d4.png" ><img/></div>
@@ -244,22 +248,22 @@
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 </font>
 
-<h2 id="2-删除Anaconda3虚拟环境"><a href="#2-删除Anaconda3虚拟环境" class="headerlink" title="2.删除Anaconda3虚拟环境"></a>2.删除Anaconda3虚拟环境</h2><p><font size=3>&emsp;&emsp;使用命令进行一个虚拟环境的删除</p>
+<h2 id="2-删除Anaconda3虚拟环境"><a href="#2-删除Anaconda3虚拟环境" class="headerlink" title="2.删除Anaconda3虚拟环境"></a>2.删除Anaconda3虚拟环境</h2><p><font size=3>使用命令进行一个虚拟环境的删除</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#删除环境</span><br><span class="line">conda remove --name env_name --all</span><br><span class="line"></span><br><span class="line">#退出环境</span><br><span class="line">conda deactivate env_name</span><br></pre></td></tr></table></figure>
 </font>
 
 
-<h2 id="3-Anaconda3换源"><a href="#3-Anaconda3换源" class="headerlink" title="3.Anaconda3换源"></a>3.Anaconda3换源</h2><p><font size=3>&emsp;&emsp;执行下面两个命令，目录C:\Users下就会生成配置文件.condarc直接编辑就好</p>
+<h2 id="3-Anaconda3换源"><a href="#3-Anaconda3换源" class="headerlink" title="3.Anaconda3换源"></a>3.Anaconda3换源</h2><p><font size=3>执行下面两个命令，目录C:\Users下就会生成配置文件.condarc直接编辑就好</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查看是否配置正确</span><br><span class="line">conda info</span><br></pre></td></tr></table></figure>
 </font>
 
-<h2 id="4-导出requirements-txt"><a href="#4-导出requirements-txt" class="headerlink" title="4.导出requirements.txt"></a>4.导出requirements.txt</h2><p><font size=3>&emsp;&emsp;有三种方法，但是个人认为前面两种都不好，简直是乱来。在做人脸识别的时候，可能项目太大了，使用前面两种都不行，第二种还瞎给我安装一堆东西。<br>&emsp;&emsp;第一种，适合于单个python环境</p>
+<h2 id="4-导出requirements-txt"><a href="#4-导出requirements-txt" class="headerlink" title="4.导出requirements.txt"></a>4.导出requirements.txt</h2><p><font size=3>有三种方法，前面两种都不好。项目太大时，使用前面两种都不行<br>&emsp;&emsp;第一种，适合于单个python环境</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install freeze</span><br><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;第二种，感觉不行实际也不行，不过还是记录一下</p>
+<p>第二种，感觉不行实际也不行，不过还是记录一下</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pigar</span><br><span class="line">pigar -c D:\Codesave\yoloV5_arcface</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;第三种，个人感觉最好</p>
+<p>第三种，个人感觉最好</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pipreqs</span><br><span class="line">pipreqs D:\Codesave\yoloV5_arcface --encoding=utf8 --force</span><br><span class="line">pipreqs D:\Codesave\yoloV5_arcface --encoding=utf8</span><br></pre></td></tr></table></figure>
 </font>
 

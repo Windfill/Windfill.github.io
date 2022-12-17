@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;使用python调用本地播放器倍速播放">
+  <meta name="description" content="使用python调用本地播放器倍速播放">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BiliBili视频倍速">
 <meta property="og:url" content="https://windfill.github.io/article/414bc77e.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;使用python调用本地播放器倍速播放">
+<meta property="og:description" content="使用python调用本地播放器倍速播放">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://windfill.github.io/image/be71f35293ff992fc3d9d8e1a3156102.png">
 <meta property="article:published_time" content="2021-05-28T07:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-30T13:12:11.027Z">
+<meta property="article:modified_time" content="2022-12-17T18:33:30.936Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="视频倍速">
 <meta name="twitter:card" content="summary">
@@ -214,7 +214,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">207字</span>
+      <span class="post-count">194字</span>
     </span>
   </span>
 
@@ -234,18 +234,19 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;使用python调用本地播放器倍速播放</p>
+    <p><font color=#b275bc size=3>使用python调用本地播放器倍速播放</p>
 <span id="more"></span>
 </font>
 
-<h2 id="1-安装FFmpeg，Potplayer和python3"><a href="#1-安装FFmpeg，Potplayer和python3" class="headerlink" title="1.安装FFmpeg，Potplayer和python3"></a>1.安装FFmpeg，Potplayer和python3</h2><p><font size=3>&emsp;&emsp;FFmpeg下载链接<a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds">Github网址</a>，之后将bin加入系统path路径<br>&emsp;&emsp;完美解码集成了Potplayer还有Potplayer需要的一些组件，建议直接安装完美解码<a target="_blank" rel="noopener" href="https://jm.wmzhe.com/">完美解码</a>之后将PotPlayerMini64.exe位置加入系统path路径<br>&emsp;&emsp;python3安装记得选择pip，如果是其他环境，如Anaconda3，可以把最后生成的exe复制到一个文件夹，添加到系统path路径即可<br>&emsp;&emsp;更新：可以使用TamperMonkey加<a target="_blank" rel="noopener" href="https://github.com/the1812/Bilibili-Evolved">BilibiliEvolved插件</a><br></font></p>
+<h2 id="1-安装FFmpeg，Potplayer和python3"><a href="#1-安装FFmpeg，Potplayer和python3" class="headerlink" title="1.安装FFmpeg，Potplayer和python3"></a>1.安装FFmpeg，Potplayer和python3</h2><p><font size=3>FFmpeg下载链接<a target="_blank" rel="noopener" href="https://github.com/BtbN/FFmpeg-Builds">Github网址</a>，之后将bin加入系统path路径.完美解码集成了Potplayer还有Potplayer需要的一些组件，建议直接安装完美解码<a target="_blank" rel="noopener" href="https://jm.wmzhe.com/">完美解码</a>之后将PotPlayerMini64.exe位置加入系统path路径</p>
+<p>python3安装记得选择pip，如果是其他环境，如Anaconda3，可以把最后生成的exe复制到一个文件夹，添加到系统path路径即可<br>更新：可以使用TamperMonkey加<a target="_blank" rel="noopener" href="https://github.com/the1812/Bilibili-Evolved">BilibiliEvolved插件</a><br></font></p>
 <h2 id="2-安装ykdl等"><a href="#2-安装ykdl等" class="headerlink" title="2.安装ykdl等"></a>2.安装ykdl等</h2><font size=3>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ykdl -h 回车，如出现帮助内容则表示成功</span></span><br><span class="line">pip install --upgrade ykdl</span><br><span class="line"></span><br><span class="line">pip install --upgrade you-get</span><br><span class="line"></span><br><span class="line">pip install --upgrade youtube-dl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </font>
 
 
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p><font size=3>&emsp;&emsp;输入下面命令即可，最高12倍速</p>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p><font size=3>输入下面命令即可，最高12倍速</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ykdl -p PotPlayerMini64 视频地址</span><br></pre></td></tr></table></figure>
 <p>运行结果：</p>
 <div align=center><img src="../image/be71f35293ff992fc3d9d8e1a3156102.png" ><img/></div>

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://windfill.github.io">
-  <title>刷机，以MI6为例 | Windfill&#39;s Blog</title>
+  <title>刷机 | Windfill&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;小米是国内为数不多可以获取root权限的手机了，具有一定的可玩性，">
+  <meta name="description" content="刷机知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="刷机，以MI6为例">
+<meta property="og:title" content="刷机">
 <meta property="og:url" content="https://windfill.github.io/article/131eed20.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;小米是国内为数不多可以获取root权限的手机了，具有一定的可玩性，">
+<meta property="og:description" content="刷机知识">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-02-06T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-10T10:28:41.340Z">
+<meta property="article:published_time" content="2022-12-11T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-17T17:31:34.244Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="刷机">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      刷机，以MI6为例
+      刷机
     </h1>
   
 
@@ -199,7 +199,7 @@
         </span>
 
 <a href="/article/131eed20.html" class="archive-article-date">
-        <time datetime="2021-02-06T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-06</time>
+        <time datetime="2022-12-11T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-11</time>
 </a>
 
   
@@ -212,7 +212,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">594字</span>
+      <span class="post-count">826字</span>
     </span>
   </span>
 
@@ -221,7 +221,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -232,29 +232,18 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;小米是国内为数不多可以获取root权限的手机了，具有一定的可玩性，<span id="more"></span>记录一下刷机过程中的知识便于回忆，和一些手机底层涉及的相关术语<br></font></p>
-<h2 id="一-工具介绍"><a href="#一-工具介绍" class="headerlink" title="一.工具介绍"></a>一.工具介绍</h2><h3 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h3><p><font size=3>1. 搞机助手  <a target="_blank" rel="noopener" href="https://lsdy.top/">https://lsdy.top/</a><br>2. TWRP一个第三方Recivery  <a target="_blank" rel="noopener" href="https://twrp.me/Devices/">https://twrp.me/Devices/</a><br>3. 小米手机申请解锁BootLoader  <a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">http://www.miui.com/unlock/index.html</a><br>4. Magisk  <a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases">https://github.com/topjohnwu/Magisk/releases</a><br>5. Magisk Manager  <a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases">https://github.com/topjohnwu/Magisk/releases</a><br>6. Magisk Riru Core  <a target="_blank" rel="noopener" href="https://github.com/RikkaApps/Riru/releases">https://github.com/RikkaApps/Riru/releases</a><br>7. Magisk Riru EdXposed  <a target="_blank" rel="noopener" href="https://github.com/ElderDrivers/EdXposed/releases">https://github.com/ElderDrivers/EdXposed/releases</a><br>8. Magisk EdXposed Manager  <a target="_blank" rel="noopener" href="https://github.com/ElderDrivers/EdXposedManager/releases">https://github.com/ElderDrivers/EdXposedManager/releases</a><br>9. MIUI9 官方ROM  <a target="_blank" rel="noopener" href="https://www.xiaomi.cn/post/1402113">https://www.xiaomi.cn/post/1402113</a><br></font></p>
-<h3 id="2-说明"><a href="#2-说明" class="headerlink" title="2.说明"></a>2.说明</h3><p><font size=3>&emsp;&emsp;介绍一下各个软件的作用</p>
-<ol>
-<li>Recivery：是Android手机备份功能，指的是一种可以对安卓机内部的数据或系统进行修改的模式，类似于win PE或DOS</li>
-<li>BootLoader：相当于手机的bios，BootLoader被锁的手机必须要破解才能刷第三方rom</li>
-<li>Magisk： 刷入Magisk是刷入第三方系统底层框架，使得手机root</li>
-<li>Magisk Manager： 一个APP，管理框架的APP，可视化使用这些功能，提高人机交互</li>
-<li>Magisk Riru Core：Xposed框架的插件核心</li>
-<li>Magisk Riru EdXposed：一个模块提供用户的插件使用</li>
-<li>Magisk EdXposed Manager：管理用户插件</li>
-<li>Xposed：Xposed直接刷入系统的方式，经常导致手机不能启动，已经过时，现在一般是使用EdXposed</li>
-<li>FastBoot：是一种线刷模式，就是使用USB数据线连接手机的一种刷机模式。相对于某些系统（如小米）的卡刷来说，线刷更可靠，安全</font></li>
-</ol>
-<h2 id="二-刷机"><a href="#二-刷机" class="headerlink" title="二.刷机"></a>二.刷机</h2><h3 id="1-大概过程"><a href="#1-大概过程" class="headerlink" title="1.大概过程"></a>1.大概过程</h3><p><font size=3>&emsp;&emsp;日常用到的基本上为面具，第三方Rec，Edxp等。就是先把手机BL解锁，解锁之后使用搞机助手刷入第三方Rec，然后使用第三方Rec卡刷Magisk的zip和Edxp即可。</font></p>
-<h3 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2.注意事项"></a>2.注意事项</h3><p><font size=3>&emsp;&emsp;一些注意事项</p>
-<ol>
-<li>第三方Rec被原Rec覆盖：其实无所谓，可以通过搞机助手推到手机里面，刷不刷入到Rec分区都可以</li>
-<li>小米手机记得修复一下FastBoot USB3.0</li>
-<li>其他的搞机助手都有详细的说明就不在赘述</li>
-<li>小米手机关机或者重启状态下，电源和音量+，进入Rec</li>
-<li>小米手机关机或者重启状态下，电源和音量-，进入FastBoot</font></li>
-</ol>
+    <p><font color=#b275bc size=3>刷机知识</p>
+<span id="more"></span>
+</font>
+
+<h2 id="K40-Pro线刷"><a href="#K40-Pro线刷" class="headerlink" title="K40 Pro线刷"></a>K40 Pro线刷</h2><h3 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h3><p><font size=3>1.搞机助手  <a target="_blank" rel="noopener" href="https://lsdy.top/">https://lsdy.top/</a><br>2.解锁BL：<a target="_blank" rel="noopener" href="https://s.xiaomi.cn/c/3UTXxM2A?channel=Share">https://s.xiaomi.cn/c/3UTXxM2A?channel=Share</a><br>3.MIUI线刷包：<a target="_blank" rel="noopener" href="https://s.xiaomi.cn/c/ATqQkhE0?channel=Share">https://s.xiaomi.cn/c/ATqQkhE0?channel=Share</a><br>4.注意事项：<a target="_blank" rel="noopener" href="https://s.xiaomi.cn/c/ATqQkhE0?channel=Share">https://s.xiaomi.cn/c/ATqQkhE0?channel=Share</a><br>5.刷机教程：<a target="_blank" rel="noopener" href="https://s.mi.cn/c/rBKFDDb4?channel=Share">https://s.mi.cn/c/rBKFDDb4?channel=Share</a><br>6.MiFlash：<a target="_blank" rel="noopener" href="https://s.mi.cn/c/rBKFDDb4?channel=Share">https://s.mi.cn/c/rBKFDDb4?channel=Share</a><br>7.其他ROM1(是不是官方不知道):<a target="_blank" rel="noopener" href="https://roms.miuier.com/">https://roms.miuier.com/</a><br>8.其他ROM2(是不是官方不知道):<a target="_blank" rel="noopener" href="https://miuiver.com/">https://miuiver.com/</a><br></font></p>
+<h3 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2.注意事项"></a>2.注意事项</h3><p><font size=3>如果出现错误：使用谷歌搜索相应的代码。下面这个错误就是注释这两句，当然删除也行或者使用::注释，我只试了下面这种</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">flash_all.bat——清除数据</span><br><span class="line">flash_all_except_storage.bat——保留用户数据（为了提高成功率忽略这个）</span><br><span class="line">flash_all_lock.bat——清除数据后上锁</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">error:FAILED (remote: update sparse crc list failed</span><br><span class="line">找到</span><br><span class="line">fastboot %* flash crclist %~dp0images\crclist.txt ||@ECHO&quot;Flash crclist error&quot; &amp;&amp; exit /B 1</span><br><span class="line">fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt ||@ECHO&quot;Flash sparsecrclist error&quot; &amp;&amp; exit /B 1</span><br><span class="line">修改为</span><br><span class="line">REM fastboot %* flash crclist %~dp0images\crclist.txt ||@ECHO&quot;Flash crclist error&quot; &amp;&amp; exit /B 1</span><br><span class="line">REM fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt ||@ECHO&quot;Flash sparsecrclist error&quot; &amp;&amp; exit /B 1</span><br></pre></td></tr></table></figure>
+<p>MiFlash建议先使用2018（对于不是特别新的机型来说）<br></font></p>
+<h2 id="MI6卡刷"><a href="#MI6卡刷" class="headerlink" title="MI6卡刷"></a>MI6卡刷</h2><h3 id="1-准备-好几年之前写的"><a href="#1-准备-好几年之前写的" class="headerlink" title="1.准备-好几年之前写的"></a>1.准备-好几年之前写的</h3><p><font size=3>1.搞机助手  <a target="_blank" rel="noopener" href="https://lsdy.top/">https://lsdy.top/</a><br>2.TWRP一个第三方Recivery  <a target="_blank" rel="noopener" href="https://twrp.me/Devices/">https://twrp.me/Devices/</a><br>3.小米手机申请解锁BootLoader  <a target="_blank" rel="noopener" href="http://www.miui.com/unlock/index.html">http://www.miui.com/unlock/index.html</a><br>4.Magisk  <a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases">https://github.com/topjohnwu/Magisk/releases</a><br>5.Magisk Manager  <a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk/releases">https://github.com/topjohnwu/Magisk/releases</a><br>6.Magisk Riru Core  <a target="_blank" rel="noopener" href="https://github.com/RikkaApps/Riru/releases">https://github.com/RikkaApps/Riru/releases</a><br>7.Magisk Riru EdXposed  <a target="_blank" rel="noopener" href="https://github.com/ElderDrivers/EdXposed/releases">https://github.com/ElderDrivers/EdXposed/releases</a><br>8.Magisk EdXposed Manager  <a target="_blank" rel="noopener" href="https://github.com/ElderDrivers/EdXposedManager/releases">https://github.com/ElderDrivers/EdXposedManager/releases</a><br>9.MIUI9 官方ROM  <a target="_blank" rel="noopener" href="https://www.xiaomi.cn/post/1402113">https://www.xiaomi.cn/post/1402113</a><br></font></p>
+<h3 id="2-说明"><a href="#2-说明" class="headerlink" title="2.说明"></a>2.说明</h3><p><font size=3>介绍一下各个软件的作用<br>1.Recivery：是Android手机备份功能，指的是一种可以对安卓机内部的数据或系统进行修改的模式，类似于win PE或DOS<br>2.BootLoader：相当于手机的bios，BootLoader被锁的手机必须要破解才能刷第三方rom<br>3.Magisk： 刷入Magisk是刷入第三方系统底层框架，使得手机root<br>4.Magisk Manager： 一个APP，管理框架的APP，可视化使用这些功能，提高人机交互<br>5.Magisk Riru Core：Xposed框架的插件核心<br>6.Magisk Riru EdXposed：一个模块提供用户的插件使用<br>7.Magisk EdXposed Manager：管理用户插件<br>8.Xposed：Xposed直接刷入系统的方式，经常导致手机不能启动，已经过时，现在一般是使用EdXposed<br>9.FastBoot：是一种线刷模式，就是使用USB数据线连接手机的一种刷机模式。相对于某些系统（如小米）的卡刷来说，线刷更可靠，安全<br></font></p>
+<h3 id="3-大概过程"><a href="#3-大概过程" class="headerlink" title="3.大概过程"></a>3.大概过程</h3><p><font size=3>日常用到的基本上为面具，第三方Rec，Edxp等。就是先把手机BL解锁，解锁之后使用搞机助手刷入第三方Rec，然后使用第三方Rec卡刷Magisk的zip和Edxp即可。<br></font></p>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h3><p><font size=3>一些注意事项<br>1.第三方Rec被原Rec覆盖：其实无所谓，可以通过搞机助手推到手机里面，刷不刷入到Rec分区都可以<br>2.小米手机记得修复一下FastBoot USB3.0<br>3.其他的搞机助手都有详细的说明就不在赘述<br>4.小米手机关机或者重启状态下，电源和音量+，进入Rec<br>5.小米手机关机或者重启状态下，电源和音量-，进入FastBoot<br></font></p>
 
     
 
@@ -269,7 +258,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://windfill.github.io/article/131eed20.html" title="刷机，以MI6为例" target="_blank">https://windfill.github.io/article/131eed20.html</a>
+          <a href="https://windfill.github.io/article/131eed20.html" title="刷机" target="_blank">https://windfill.github.io/article/131eed20.html</a>
         </li>
         
         <li>
@@ -321,18 +310,9 @@
 
 <nav id="article-nav">
   
-    <a href="/article/1985c090.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Windows激活命令
-        
-      </div>
-    </a>
   
-  
-    <a href="/article/347f0c0d.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">简易云盘</div>
+    <a href="/article/8f43333b.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">生活知识</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -359,7 +339,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">一.工具介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text">2.说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E5%88%B7%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">二.刷机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%A7%E6%A6%82%E8%BF%87%E7%A8%8B"><span class="toc-number">2.1.</span> <span class="toc-text">1.大概过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">2.2.</span> <span class="toc-text">2.注意事项</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#K40-Pro%E7%BA%BF%E5%88%B7"><span class="toc-number">1.</span> <span class="toc-text">K40 Pro线刷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.2.</span> <span class="toc-text">2.注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MI6%E5%8D%A1%E5%88%B7"><span class="toc-number">2.</span> <span class="toc-text">MI6卡刷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87-%E5%A5%BD%E5%87%A0%E5%B9%B4%E4%B9%8B%E5%89%8D%E5%86%99%E7%9A%84"><span class="toc-number">2.1.</span> <span class="toc-text">1.准备-好几年之前写的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%B4%E6%98%8E"><span class="toc-number">2.2.</span> <span class="toc-text">2.说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%A4%A7%E6%A6%82%E8%BF%87%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">3.大概过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">2.4.</span> <span class="toc-text">4.注意事项</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

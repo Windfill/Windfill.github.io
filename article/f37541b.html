@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;在CentOS下安装ftp服务以便于可以在本地可以进行一个文件的传输和交互。">
+  <meta name="description" content="在CentOS下安装ftp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centos7下安装ftp服务">
 <meta property="og:url" content="https://windfill.github.io/article/f37541b.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;在CentOS下安装ftp服务以便于可以在本地可以进行一个文件的传输和交互。">
+<meta property="og:description" content="在CentOS下安装ftp">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://windfill.github.io/image/2282943f6397b0e3a9a8eb95df31ce50.png">
 <meta property="article:published_time" content="2021-02-05T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-31T03:23:00.027Z">
+<meta property="article:modified_time" content="2022-12-17T18:05:17.841Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="安装ftp">
 <meta name="twitter:card" content="summary">
@@ -214,7 +214,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">310字</span>
+      <span class="post-count">223字</span>
     </span>
   </span>
 
@@ -234,12 +234,14 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;在CentOS下安装ftp服务以便于可以在本地可以进行一个文件的传输和交互。<span id="more"></span>虽然CentOS出于某些原因将被CentOS Stream替代而且还是一个将进行一个收费的软件，不过CentOS生命周期还有2–3年，相信白嫖怪们不会受制于人的。直接上命令<br></font></p>
+    <p><font color=#b275bc size=3>在CentOS下安装ftp</p>
+<span id="more"></span>
+</font>
+
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd -y <span class="comment"># 安装vsftp软件</span></span><br><span class="line">systemctl start vsftpd</span><br><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br><span class="line">systemctl status vsftpd</span><br><span class="line">useradd xxxx <span class="comment"># 为Linux添加其他用户，将其作为ftp服务存放的目录</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;123456&#x27;</span> | passwd --stdin xxxx <span class="comment"># 给用户设置一个密码如123456</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">chkconfig vsftpd on <span class="comment"># 设置开机自启动</span></span><br><span class="line">service vsftpd restart <span class="comment"># 重新启动ftp服务</span></span><br><span class="line">netstat -antup | grep ftp <span class="comment"># 查看ftp服务端口</span></span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><font size=3>1. /etc/vsftpd/vsftpd.conf # 主配置文件，核心配置文件<br>2. /etc/vsftpd/ftpusers # 黑名单，这个里面的用户不允许访问FTP服务器<br>3. /etc/vsftpd/user_list # 白名单，允许访问FTP服务器的用户列表<br>&emsp;&emsp;如果是阿里云服务器的话，需要在安全组设置里面打开相应的端口。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><font size=3>1. /etc/vsftpd/vsftpd.conf # 主配置文件，核心配置文件<br>2. /etc/vsftpd/ftpusers # 黑名单，这个里面的用户不允许访问FTP服务器<br>3. /etc/vsftpd/user_list # 白名单，允许访问FTP服务器的用户列表<br>如果是阿里云服务器的话，需要在安全组设置里面打开相应的端口。</p>
 <div align=center><img src="../image/2282943f6397b0e3a9a8eb95df31ce50.png" ><img/></div>
 默认是21，如果不行换成22端口就行了。21如果不能连是配置出了，问题可以百度解决，但是22是可以使用的。
-</font>
     
 
     

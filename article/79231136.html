@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;便于调Robocom的车">
+  <meta name="description" content="便于调Robocom的车">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARM64安装TeamViewer">
 <meta property="og:url" content="https://windfill.github.io/article/79231136.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;便于调Robocom的车">
+<meta property="og:description" content="便于调Robocom的车">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-20T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-10T10:55:43.080Z">
+<meta property="article:modified_time" content="2022-12-17T18:04:28.621Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="树莓派版TV">
 <meta name="twitter:card" content="summary">
@@ -212,7 +212,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">182字</span>
+      <span class="post-count">172字</span>
     </span>
   </span>
 
@@ -232,15 +232,15 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;便于调Robocom的车<br></font></p>
+    <p><font color=#b275bc size=3>便于调Robocom的车<br></font></p>
 <span id="more"></span>
 
-<h2 id="1-过程"><a href="#1-过程" class="headerlink" title="1.过程"></a>1.过程</h2><p><font size=3>&emsp;&emsp;TeamViewer其实还没有官方的arm64版，安装的其实是TeamViewer Host for Raspberry Pi。树莓派版为armhf架构，于是需要装一些armhf的依赖，linux文件管理器下打开一个文件夹（不常用或者新建一个文件夹，命令：mkdir xxxx），目录中右键Open in terminal 打开窗口输入下面：</p>
+<h2 id="1-过程"><a href="#1-过程" class="headerlink" title="1.过程"></a>1.过程</h2><p><font size=3>TeamViewer其实还没有官方的arm64版，安装的其实是TeamViewer Host for Raspberry Pi。树莓派版为armhf架构，于是需要装一些armhf的依赖，linux文件管理器下打开一个文件夹（不常用或者新建一个文件夹，命令：mkdir xxxx），目录中右键Open in terminal 打开窗口输入下面：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/apt/sources.list https://repo.huaweicloud.com/repository/conf/Ubuntu-Ports-bionic.list</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;然后去设置里面关掉其他仓库不然会全部索引一遍</p>
+<p>然后去设置里面关掉其他仓库不然会全部索引一遍</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo dpkg --add-architecture armhf</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install libxtst6:armhf</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;然后下载teamviewer_15.22.3_arm64.deb <a target="_blank" rel="noopener" href="https://www.teamviewer.com/en/download/raspberry-pi/">下载链接</a></p>
-<p>&emsp;&emsp;安装命令：</p>
+<p>然后下载teamviewer_15.22.3_arm64.deb <a target="_blank" rel="noopener" href="https://www.teamviewer.com/en/download/raspberry-pi/">下载链接</a></p>
+<p>安装命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i teamviewer_15.22.3_arm64.deb</span><br></pre></td></tr></table></figure>
 </font>
 

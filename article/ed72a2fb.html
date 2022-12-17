@@ -10,26 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;记录一下Windows下常用的优化软件">
+  <meta name="description" content="记录一下Windows下常用的优化软件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows优化">
 <meta property="og:url" content="https://windfill.github.io/article/ed72a2fb.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;记录一下Windows下常用的优化软件">
+<meta property="og:description" content="记录一下Windows下常用的优化软件">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://windfill.github.io/image/30f5f7feed3e486e738f8f7305e422ab.png">
-<meta property="og:image" content="https://windfill.github.io/image/7498d05e62211183a9b59bae60970306.png">
-<meta property="og:image" content="https://windfill.github.io/image/606b87c7febc23521a7557faddedba9f.png">
-<meta property="og:image" content="https://windfill.github.io/image/5366864c895db2758817868f3fd75b49.png">
-<meta property="og:image" content="https://windfill.github.io/image/d3935003cea4dba4413cae6555cc2bc8.png">
 <meta property="og:image" content="https://windfill.github.io/image/My20220604200450.jpg">
-<meta property="og:image" content="https://windfill.github.io/image/My20220604200545.jpg">
 <meta property="article:published_time" content="2021-02-16T02:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-18T09:35:26.415Z">
+<meta property="article:modified_time" content="2022-12-17T18:30:46.646Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="系统优化">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://windfill.github.io/image/30f5f7feed3e486e738f8f7305e422ab.png">
+<meta name="twitter:image" content="https://windfill.github.io/image/My20220604200450.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Windfill&#39;s Blog" type="application/atom+xml">
   
@@ -240,44 +234,29 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;记录一下Windows下常用的优化软件<br></font></p>
+    <p><font color=#b275bc size=3>记录一下Windows下常用的优化软件<br></font></p>
 <span id="more"></span>
 
-<h2 id="一-释放硬盘空间"><a href="#一-释放硬盘空间" class="headerlink" title="一.释放硬盘空间"></a>一.释放硬盘空间</h2><h3 id="1-关闭休眠"><a href="#1-关闭休眠" class="headerlink" title="1.关闭休眠"></a>1.关闭休眠</h3><p><font size=3>&emsp;&emsp;需要注意的是，Win10关闭系统休眠后，会导致“快速启动”功能失效</font></p>
+<h2 id="一-释放硬盘空间"><a href="#一-释放硬盘空间" class="headerlink" title="一.释放硬盘空间"></a>一.释放硬盘空间</h2><h3 id="1-关闭休眠"><a href="#1-关闭休眠" class="headerlink" title="1.关闭休眠"></a>1.关闭休眠</h3><p><font size=3>需要注意的是，Win10关闭系统休眠后，会导致“快速启动”功能失效</font></p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -h off</span><br></pre></td></tr></table></figure>
-<h3 id="2-合理设置虚拟内存"><a href="#2-合理设置虚拟内存" class="headerlink" title="2.合理设置虚拟内存"></a>2.合理设置虚拟内存</h3><p><font size=3>&emsp;&emsp;什么是虚拟内存？就是比如10G大的游戏，不可能也不会一次性加载到内存中。先放在磁盘中方便数据交换。<br>没错是越大越好，不过太大了也不好，占用C盘的空间。至于怎么设置，最佳差不多是内存条的1.5倍，如果是跑深度学习的直接40G+，打游戏如果内存条是16G可以先设置一下16G看看，如果不行再加。对于4G的内存条建议8G，这样电脑就不会因为内存不够出现很大的卡顿了。当然如果你内存条很大，比如64G倒是可以直接设置的小一些，但是不建议不进行设置，因为虚拟存储器是电脑很重要的一个模块。下面是最新版win10的设置教程：</p>
-<div align=center><img src="../image/30f5f7feed3e486e738f8f7305e422ab.png" ><img/></div>
-<div align=center><img src="../image/7498d05e62211183a9b59bae60970306.png" ><img/></div>
-<div align=center><img src="../image/606b87c7febc23521a7557faddedba9f.png" ><img/></div>
-<div align=center><img src="../image/5366864c895db2758817868f3fd75b49.png" ><img/></div>
-<div align=center><img src="../image/d3935003cea4dba4413cae6555cc2bc8.png" ><img/></div>
+<h3 id="2-合理设置虚拟内存"><a href="#2-合理设置虚拟内存" class="headerlink" title="2.合理设置虚拟内存"></a>2.合理设置虚拟内存</h3><p><font size=3>什么是虚拟内存？就是比如10G大的游戏，不可能也不会一次性加载到内存中。先放在磁盘中方便数据交换。<br>没错是越大越好，不过太大了也不好，占用C盘的空间。至于怎么设置，最佳差不多是内存条的1.5倍，如果是跑深度学习的直接40G+，打游戏如果内存条是16G可以先设置一下16G看看，如果不行再加。对于4G的内存条建议8G，这样电脑就不会因为内存不够出现很大的卡顿了。当然如果你内存条很大，比如64G倒是可以直接设置的小一些，但是不建议不进行设置，因为虚拟存储器是电脑很重要的一个模块。<br></font></p>
+<h3 id="3-使用卸载软件"><a href="#3-使用卸载软件" class="headerlink" title="3.使用卸载软件"></a>3.使用卸载软件</h3><p><font size=3>使用专门的卸载软件来减少工作量，下面三个软件都可以对注册表进行一定的清理，推荐第一个个人用感觉蛮好的，第二个有些名气，没有具体的了解，第三个清理最不彻底，因为有免费和收费版。前三都是收费软件，第三个有免费版。第四个是微软用来给用户删除服务的，当然你可以可以使用dos命令完成。<br>1.Total Uninstall 7<br>2.IObit Uninstaller Pro<br>3.Geek(免费的，有能力建议前面的)<a target="_blank" rel="noopener" href="https://geekuninstaller.com/">geek官网链接</a><br>4.Windows Installer CleanUp</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc delete xxxx</span><br></pre></td></tr></table></figure>
+</font>
 
-<h3 id="3-使用卸载软件"><a href="#3-使用卸载软件" class="headerlink" title="3.使用卸载软件"></a>3.使用卸载软件</h3><p><font size=3>&emsp;&emsp;使用专门的卸载软件来减少工作量，下面三个软件都可以对注册表进行一定的清理，推荐第一个个人用感觉蛮好的，第二个有些名气，没有具体的了解，第三个清理最不彻底，因为有免费和收费版。前三都是收费软件，第三个有免费版。第四个是微软用来给用户删除服务的，当然你可以可以使用dos命令完成。</p>
-<ol>
-<li>Total Uninstall 7</li>
-<li>IObit Uninstaller Pro</li>
-<li>Geek(免费的，有能力建议前面的)<a target="_blank" rel="noopener" href="https://geekuninstaller.com/">geek官网链接</a></li>
-<li>Windows Installer CleanUp<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc delete xxxx</span><br></pre></td></tr></table></figure>
-</font></li>
-</ol>
-<h3 id="4-清理windows更新文件"><a href="#4-清理windows更新文件" class="headerlink" title="4.清理windows更新文件"></a>4.清理windows更新文件</h3><p><font size=3>&emsp;&emsp;如果想关闭Windows更新请参考我另外一篇博客。打开此电脑，选择系统盘，右键选择磁盘清理，再选择清理系统文件即可，等待扫描选中Windows更新，之后点击清理。<br></font></p>
-<h3 id="5-清理QQ文件"><a href="#5-清理QQ文件" class="headerlink" title="5.清理QQ文件"></a>5.清理QQ文件</h3><p><font size=3>&emsp;&emsp;如果不停的接收文件，QQ所占的空间会超乎想象，所以按时清理一下很有必要，缓存位置未改主要在C盘，建议使用wiztree扫一下<br></font></p>
-<h3 id="6-使用磁盘分析软件"><a href="#6-使用磁盘分析软件" class="headerlink" title="6.使用磁盘分析软件"></a>6.使用磁盘分析软件</h3><p><font size=3>&emsp;&emsp;使用wiztree，这是一个免费软件，直接百度就可以。<br></font></p>
-<h3 id="7-关闭Win自动更新"><a href="#7-关闭Win自动更新" class="headerlink" title="7.关闭Win自动更新"></a>7.关闭Win自动更新</h3><p><font size=3>&emsp;&emsp;关闭Win自动更新，可以参考我的另外一个博客<br></font></p>
-<h2 id="二-系统优化"><a href="#二-系统优化" class="headerlink" title="二.系统优化"></a>二.系统优化</h2><h3 id="1-关闭磁盘整理"><a href="#1-关闭磁盘整理" class="headerlink" title="1.关闭磁盘整理"></a>1.关闭磁盘整理</h3><p><font size=3>&emsp;&emsp;SSD没有必要，就算想也不用太频繁。HDD倒是可以2–3个月整理一下<br></font></p>
-<h3 id="2-调整UAC"><a href="#2-调整UAC" class="headerlink" title="2.调整UAC"></a>2.调整UAC</h3><p><font size=3>&emsp;&emsp;不知道微软的想法是什么，每当我运行一个程序，就会出现某某程序试图改变你的计算机。提示很突兀，或者像linux一样弄个密码？至少在Windows下我不想看到。提示的时候选择何时显示通知，拉到最低即可。当然你可以获取超级管理员权限Administrator，不过家庭中文版没有这个，是管理员其实也够用了<br></font></p>
-<h3 id="3-工具"><a href="#3-工具" class="headerlink" title="3.工具"></a>3.工具</h3><p><font size=3>&emsp;&emsp;可以参考我的另外一个博客进行设置</p>
-<ol>
-<li>DISM++ 感觉还不错</li>
-<li>火绒 看个人吧，反正我是不推荐的，如果你不愿意折腾，这个其实还好，只是占用内存</font></li>
-</ol>
-<h3 id="4-关闭传递优化"><a href="#4-关闭传递优化" class="headerlink" title="4.关闭传递优化"></a>4.关闭传递优化</h3><p><font size=3>&emsp;&emsp;传递优化”是微软为了加快Windows更新和Microsoft Store应用更新的下载速度，而在Windows10中引入的一种“自组织分布式本地化缓存”设计，可以在用户电脑上缓存更新，以上传给同一局域网或Internet上其他用户电脑，从而实现类似 P2P 下载的加速效果。默认情况下，该缓存最多可以占用高达 10GB 的磁盘空间，保留时间则为 3 天。这就好比你在 BT 下载的时候，下载完文件以后，你不能立即关闭电脑，而是要自觉做种，上传你已经下载的文件分享给其他用户。<br>&emsp;&emsp;我一般是下载镜像更新所以无所谓，关了就行了。Win10下<strong>Windows设置——更新和安全——传递优化</strong></p>
+<h3 id="4-清理windows更新文件"><a href="#4-清理windows更新文件" class="headerlink" title="4.清理windows更新文件"></a>4.清理windows更新文件</h3><p><font size=3>如果想关闭Windows更新请参考我另外一篇博客。打开此电脑，选择系统盘，右键选择磁盘清理，再选择清理系统文件即可，等待扫描选中Windows更新，之后点击清理。<br></font></p>
+<h3 id="5-清理QQ文件"><a href="#5-清理QQ文件" class="headerlink" title="5.清理QQ文件"></a>5.清理QQ文件</h3><p><font size=3>如果不停的接收文件，QQ所占的空间会超乎想象，所以按时清理一下很有必要，缓存位置未改主要在C盘，建议使用wiztree扫一下<br></font></p>
+<h3 id="6-使用磁盘分析软件"><a href="#6-使用磁盘分析软件" class="headerlink" title="6.使用磁盘分析软件"></a>6.使用磁盘分析软件</h3><p><font size=3>使用wiztree，这是一个免费软件，直接百度就可以。<br></font></p>
+<h3 id="7-关闭Win自动更新"><a href="#7-关闭Win自动更新" class="headerlink" title="7.关闭Win自动更新"></a>7.关闭Win自动更新</h3><p><font size=3>关闭Win自动更新，可以参考我的另外一个博客<br></font></p>
+<h2 id="二-系统优化"><a href="#二-系统优化" class="headerlink" title="二.系统优化"></a>二.系统优化</h2><h3 id="1-关闭磁盘整理"><a href="#1-关闭磁盘整理" class="headerlink" title="1.关闭磁盘整理"></a>1.关闭磁盘整理</h3><p><font size=3>SSD没有必要，就算想也不用太频繁。HDD倒是可以2–3个月整理一下<br></font></p>
+<h3 id="2-调整UAC"><a href="#2-调整UAC" class="headerlink" title="2.调整UAC"></a>2.调整UAC</h3><p><font size=3>不知道微软的想法是什么，每当我运行一个程序，就会出现某某程序试图改变你的计算机。提示很突兀，或者像linux一样弄个密码？至少在Windows下我不想看到。提示的时候选择何时显示通知，拉到最低即可。当然你可以获取超级管理员权限Administrator，不过家庭中文版没有这个，是管理员其实也够用了<br></font></p>
+<h3 id="3-工具"><a href="#3-工具" class="headerlink" title="3.工具"></a>3.工具</h3><p><font size=3>可以参考我的另外一个博客进行设置<br>1.DISM++ 感觉还不错<br>2.火绒 看个人吧，反正我是不推荐的，如果你不愿意折腾，这个其实还好，只是占用内存<br></font></p>
+<h3 id="4-关闭传递优化"><a href="#4-关闭传递优化" class="headerlink" title="4.关闭传递优化"></a>4.关闭传递优化</h3><p><font size=3>传递优化”是微软为了加快Windows更新和Microsoft Store应用更新的下载速度，而在Windows10中引入的一种“自组织分布式本地化缓存”设计，可以在用户电脑上缓存更新，以上传给同一局域网或Internet上其他用户电脑，从而实现类似 P2P 下载的加速效果。默认情况下，该缓存最多可以占用高达 10GB 的磁盘空间，保留时间则为 3 天。这就好比你在 BT 下载的时候，下载完文件以后，你不能立即关闭电脑，而是要自觉做种，上传你已经下载的文件分享给其他用户。<br>&emsp;&emsp;我一般是下载镜像更新所以无所谓，关了就行了。Win10下<strong>Windows设置——更新和安全——传递优化</strong></p>
 <div align=center><img src="../image/My20220604200450.jpg" ><img/></div>
 </font>
 
-<h3 id="5-关闭更改隐私设置"><a href="#5-关闭更改隐私设置" class="headerlink" title="5.关闭更改隐私设置"></a>5.关闭更改隐私设置</h3><p><font size=3>&emsp;&emsp;泄露隐私关了，Win10下<strong>Windows设置——隐私——常规</strong></p>
-<div align=center><img src="../image/My20220604200545.jpg" ><img/My20220604200545.jpg></div>
-</font>
+<h3 id="5-关闭更改隐私设置"><a href="#5-关闭更改隐私设置" class="headerlink" title="5.关闭更改隐私设置"></a>5.关闭更改隐私设置</h3><p><font size=3>泄露隐私关了，Win10下<strong>Windows设置——隐私——常规</strong><br></font></p>
+
     
 
     

@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="&amp;emsp;&amp;emsp;记录一下Pr导出视频太大的疑惑与解决办法">
+  <meta name="description" content="记录一下Pr导出视频太大的疑惑与解决办法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pr视频剪辑">
 <meta property="og:url" content="https://windfill.github.io/article/e4887288.html">
 <meta property="og:site_name" content="Windfill&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;记录一下Pr导出视频太大的疑惑与解决办法">
+<meta property="og:description" content="记录一下Pr导出视频太大的疑惑与解决办法">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://windfill.github.io/image/My20220724100308.jpg">
 <meta property="article:published_time" content="2022-06-16T03:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-14T10:21:56.433Z">
+<meta property="article:modified_time" content="2022-12-17T18:36:51.811Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="Pr">
 <meta name="twitter:card" content="summary">
@@ -214,7 +214,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">607字</span>
+      <span class="post-count">599字</span>
     </span>
   </span>
 
@@ -234,14 +234,16 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font color=#b275bc size=3>&emsp;&emsp;记录一下Pr导出视频太大的疑惑与解决办法<br></font></p>
+    <p><font color=#b275bc size=3>记录一下Pr导出视频太大的疑惑与解决办法<br></font></p>
 <span id="more"></span>
 
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p><font size=3>&emsp;&emsp;在记忆中，虽然开始对于Pr比较抵触，略微熟悉之后觉得还不错，也用过剪映，感觉一般吧，还是觉得Pr好，但是一直有个疑问Pr导出的视频略大，一般无法满足需求，这导致我还需要使用ffmpeg进行压缩，无聊百度了一下，大概是了解了。查阅知乎<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67212374/answer/253759645">原文</a>，下面是一些答主的回答：<strong>画质用2VBR，要转码快用CBR，VBR一次折中</strong>。<br>&emsp;&emsp;<strong>CBR就是按照统一的压缩率。VBR则是在设置许可之内，给予动态视频段更高的码率</strong>。同一标准码率，最大码率越大，画面质量越稳定。而二次编码的话，第一遍先把整个视频分析完，算出一个最合适的画面质量，然后对整段视频进行编码。这样可以保证动态视频的画面也能达到平均的画面质量。然而二次VBR很有可能导致整段视频中的某几分钟的码率大辐超出正常码率，对于在线视频观看来说，有可能导致卡顿影响观看体验。VBR相对好一点，CBR则是不会因为视频码率的变化导致的卡顿（网络原因导致卡顿那是神仙也没办法）。<strong>若设为VBR，在遇到视频中颜色较丰富、较难渲染的片段时，则超频到某一高码率渲染该片段。事实上如果在制作视频的时候比较合理，2-3M比特率的视频在清晰度上已经非常OK了。</strong><br>&emsp;&emsp;了解了理论后，在导出的时候在视频选项中人为控制一下<strong>帧率，分辨率，以及比特率编码和目标比特率</strong>就可以了，<strong>VBR 1次，2-4M都可以</strong>，此外，一般音频解码器是AAC，采样率44100Hz，当然如果没有什么特别要求可以忽略默认即可，<strong>VBR 1次，最低可以0.6-1</strong></p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p><font size=3>在记忆中，虽然开始对于Pr比较抵触，略微熟悉之后觉得还不错，也用过剪映，感觉一般吧，还是觉得Pr好，但是一直有个疑问Pr导出的视频略大，一般无法满足需求，这导致我还需要使用ffmpeg进行压缩，无聊百度了一下，大概是了解了。查阅知乎<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/67212374/answer/253759645">原文</a>，下面是一些答主的回答：<strong>画质用2VBR，要转码快用CBR，VBR一次折中</strong>。</p>
+<p><strong>CBR就是按照统一的压缩率。VBR则是在设置许可之内，给予动态视频段更高的码率</strong>。同一标准码率，最大码率越大，画面质量越稳定。而二次编码的话，第一遍先把整个视频分析完，算出一个最合适的画面质量，然后对整段视频进行编码。这样可以保证动态视频的画面也能达到平均的画面质量。然而二次VBR很有可能导致整段视频中的某几分钟的码率大辐超出正常码率，对于在线视频观看来说，有可能导致卡顿影响观看体验。VBR相对好一点，CBR则是不会因为视频码率的变化导致的卡顿（网络原因导致卡顿那是神仙也没办法）。<strong>若设为VBR，在遇到视频中颜色较丰富、较难渲染的片段时，则超频到某一高码率渲染该片段。事实上如果在制作视频的时候比较合理，2-3M比特率的视频在清晰度上已经非常OK了。</strong></p>
+<p>了解了理论后，在导出的时候在视频选项中人为控制一下<strong>帧率，分辨率，以及比特率编码和目标比特率</strong>就可以了，<strong>VBR 1次，2-4M都可以</strong>，此外，一般音频解码器是AAC，采样率44100Hz，当然如果没有什么特别要求可以忽略默认即可，<strong>VBR 1次，最低可以0.6-1</strong></p>
 <div align=center><img src="../image/My20220724100308.jpg" ><img/></div>
 </font>
 
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><font size=3>1. 多个视频合在一起，如果分辨率不一样需要保留最大的分辨率，不然较大的视频分辨率是无法正常显示所有画面的<br>2. VBR 1次，最小可以0.6左右，不宜太小<br></font></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><font size=3>1.多个视频合在一起，如果分辨率不一样需要保留最大的分辨率，不然较大的视频分辨率是无法正常显示所有画面的<br>2.VBR 1次，最小可以0.6左右，不宜太小<br></font></p>
 
     
 
