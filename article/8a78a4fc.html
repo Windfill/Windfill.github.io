@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://windfill.github.io/image/My20221218123813.jpg">
 <meta property="og:image" content="https://windfill.github.io/image/My20221218123889.jpg">
 <meta property="article:published_time" content="2023-01-06T07:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-04T14:31:10.737Z">
+<meta property="article:modified_time" content="2023-02-07T14:35:48.526Z">
 <meta property="article:author" content="windfill">
 <meta property="article:tag" content="宽带相关">
 <meta name="twitter:card" content="summary">
@@ -260,7 +260,7 @@
 <div align=center><img src="../image/My20230106122714.jpg" ><img/></div>
 
 <p>宽带密码看不到，在浏览器按F12进入开发者调试器，对着密码框右键检查，在代码内找到 type=”password”，双击删除掉password，就可以看到加密过的密码，电信猫的宽带密码很多都是32位小写MD5加密的，可以通过MD5解密获得真正的密码，也有没有加密过的密码：<a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a></p>
-<h2 id="QOS限速"><a href="#QOS限速" class="headerlink" title="QOS限速"></a>QOS限速</h2><p><font size=3>设置不同的优先级，光猫也有，不过有点坑，以红米AX5400为例，家里宽带是电信300M，但是可以跑到380M，所以设置的时候还是需要设置380不然设置为300（跑不到300，会预留部分宽带，但是上限就是300）的话很亏，建议先测速一下，网站：<a target="_blank" rel="noopener" href="https://www.speedtest.cn/">https://www.speedtest.cn/</a> 下载个app换到对应运营商最近的节点，路由器CPU弱的话，建议关闭，需要一定的计算性能。另外蛋疼的是，多线程下载的时候最高速度也是设置的上限，虽然可能差距只是10M/s,但是还是觉得不值，不打游戏的话可以关了，后续旁路由加入看能不能关闭QOS</p>
+<h2 id="QOS限速"><a href="#QOS限速" class="headerlink" title="QOS限速"></a>QOS限速</h2><p><font size=3>设置不同的优先级，光猫也有，不过有点坑，以红米AX5400为例，家里宽带是电信300M，但是可以跑到380M，所以设置的时候还是需要设置380不然设置为300（跑不到300，会预留部分宽带，但是上限就是300）的话很亏，建议先测速一下，网站：<a target="_blank" rel="noopener" href="https://www.speedtest.cn/">https://www.speedtest.cn/</a> 下载个app换到对应运营商最近的节点，路由器CPU弱的话，建议关闭，需要一定的计算性能。另外蛋疼的是，多线程下载的时候最高速度也是设置的上限，虽然可能差距只是10M/s,但是还是觉得不值，不打游戏的话可以关了</p>
 <h2 id="旁路由设置"><a href="#旁路由设置" class="headerlink" title="旁路由设置"></a>旁路由设置</h2><p><font size=3>对电脑和手机分别设置网关，电脑比较容易，<strong>手机的路由器地址就是网关地址</strong>。旁路由是DHCP改成网关，clash的是代理，改成对应的IP和端口即可。手机ROOT后可以使用VPN热点这个软件进行局域网共享，没有ROOT可以使用Termux获取局域网IP设置代理模式。旁路由的DNS其一需要填写主路由的IP地址，DHCP服务选择忽略。</p>
 <h2 id="路由器天梯图"><a href="#路由器天梯图" class="headerlink" title="路由器天梯图"></a>路由器天梯图</h2><p><font size=3>个人主页的专栏里面有，看看就好（恰饭明显）：<a target="_blank" rel="noopener" href="https://space.bilibili.com/67991584">https://space.bilibili.com/67991584</a> 大致是对的，有些过于夸张了，可以借此了解一下主流型号，华三的目前为止没有测<br>国外论坛：<a target="_blank" rel="noopener" href="https://forum.openwrt.org/">https://forum.openwrt.org/</a><br>国内恩山：<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/forum.php">https://www.right.com.cn/forum/forum.php</a><br></font></p>
 <h2 id="软路由"><a href="#软路由" class="headerlink" title="软路由"></a>软路由</h2><p><font size=3>有一定的可玩性，可以让硬路由刷OpenWRT或者使用单臂路由及旁路由，单路由刷OpenWRT无线可能没有官方稳定（所以会造成不断的折腾，但是将就一下也还行），但是可以让链接的设备科学.或者使用VMware虚拟机、Hyper-V和Docker容器进行一个简单的体验。OpenWRT可以实现科学上网以及一定的广告过滤。</p>
